@@ -1,0 +1,37 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="SecondPracticeAvalonia.Pages.TeacherPage">
+  <DockPanel>
+    <Border DockPanel.Dock="Top" Background="#2E7D32" Padding="12">
+      <Grid ColumnDefinitions="Auto,*,Auto,Auto" VerticalAlignment="Center">
+        <TextBlock Text="Преподаватель" Foreground="White" FontSize="16" FontWeight="Bold"/>
+        <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="8" HorizontalAlignment="Center">
+          <Button Content="Мои курсы" Click="OnCoursesClick"/>
+          <Button Content="Вебинары" Click="OnWebinarsClick"/>
+        </StackPanel>
+        <TextBlock Grid.Column="2" x:Name="UserInfoText" Foreground="White" Margin="8,0" VerticalAlignment="Center"/>
+        <Button Grid.Column="3" Content="Выход" Click="OnLogoutClick"/>
+      </Grid>
+    </Border>
+
+    <Grid Margin="12">
+      <DataGrid x:Name="CoursesGrid" AutoGenerateColumns="False" IsReadOnly="True">
+        <DataGrid.Columns>
+          <DataGridTextColumn Header="Курс" Binding="{Binding Title}" Width="*"/>
+          <DataGridTextColumn Header="Категория" Binding="{Binding CategoryName}" Width="Auto"/>
+          <DataGridTextColumn Header="Студентов" Binding="{Binding TotalStudents}" Width="Auto"/>
+        </DataGrid.Columns>
+      </DataGrid>
+
+      <DataGrid x:Name="WebinarsGrid" AutoGenerateColumns="False" IsReadOnly="True" IsVisible="False">
+        <DataGrid.Columns>
+          <DataGridTextColumn Header="Название" Binding="{Binding Title}" Width="*"/>
+          <DataGridTextColumn Header="Курс" Binding="{Binding CourseTitle}" Width="Auto"/>
+          <DataGridTextColumn Header="Запланирован" Binding="{Binding ScheduledAt}" Width="Auto"/>
+        </DataGrid.Columns>
+      </DataGrid>
+    </Grid>
+  </DockPanel>
+</UserControl>
+
+

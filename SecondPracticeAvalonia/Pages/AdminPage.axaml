@@ -1,0 +1,42 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="SecondPracticeAvalonia.Pages.AdminPage">
+  <DockPanel>
+    <Border DockPanel.Dock="Top" Background="#2E7D32" Padding="12">
+      <Grid ColumnDefinitions="Auto,*,Auto,Auto" VerticalAlignment="Center">
+        <TextBlock Text="Администратор" Foreground="White" FontSize="16" FontWeight="Bold"/>
+        <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="8" HorizontalAlignment="Center">
+          <Button Content="Курсы" x:Name="BtnCourses" Click="OnCoursesClick"/>
+          <Button Content="Пользователи" x:Name="BtnUsers" Click="OnUsersClick"/>
+        </StackPanel>
+        <TextBlock Grid.Column="2" x:Name="UserInfoText" Foreground="White" Margin="8,0" VerticalAlignment="Center"/>
+        <Button Grid.Column="3" Content="Выход" Click="OnLogoutClick"/>
+      </Grid>
+    </Border>
+
+    <Grid Margin="12">
+      <DataGrid x:Name="CoursesGrid" AutoGenerateColumns="False" IsReadOnly="True">
+        <DataGrid.Columns>
+          <DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
+          <DataGridTextColumn Header="Название" Binding="{Binding Title}" Width="*"/>
+          <DataGridTextColumn Header="Категория" Binding="{Binding CategoryName}"/>
+          <DataGridTextColumn Header="Цена" Binding="{Binding Price}"/>
+          <DataGridTextColumn Header="Рейтинг" Binding="{Binding Rating}"/>
+        </DataGrid.Columns>
+      </DataGrid>
+
+      <DataGrid x:Name="UsersGrid" AutoGenerateColumns="False" IsReadOnly="True" IsVisible="False">
+        <DataGrid.Columns>
+          <DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
+          <DataGridTextColumn Header="E-mail" Binding="{Binding Email}" Width="2*"/>
+          <DataGridTextColumn Header="Имя" Binding="{Binding FirstName}"/>
+          <DataGridTextColumn Header="Фамилия" Binding="{Binding LastName}"/>
+          <DataGridCheckBoxColumn Header="Активен" Binding="{Binding IsActive}"/>
+          <DataGridCheckBoxColumn Header="Заблокирован" Binding="{Binding IsBlocked}"/>
+        </DataGrid.Columns>
+      </DataGrid>
+    </Grid>
+  </DockPanel>
+</UserControl>
+
+

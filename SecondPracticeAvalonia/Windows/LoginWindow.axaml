@@ -1,0 +1,28 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="SecondPracticeAvalonia.Windows.LoginWindow"
+        Width="560" Height="460"
+        Title="EduTrack — Вход"
+        CanResize="False">
+  <Grid RowDefinitions="Auto,*,Auto">
+    <TextBlock Text="EduTrack — управление онлайн-обучением"
+               FontSize="16" FontWeight="Bold" Margin="20,20,20,0"/>
+
+    <StackPanel Grid.Row="1" Spacing="8" Margin="20">
+      <TextBlock Text="E-mail"/>
+      <TextBox x:Name="EmailTextBox" Watermark="name@example.com"/>
+
+      <TextBlock Text="Пароль" Margin="0,8,0,0"/>
+      <TextBox x:Name="PasswordTextBox" PasswordChar="•"/>
+
+      <CheckBox x:Name="RememberCheck" Content="Запомнить меня" Margin="0,8,0,0"/>
+
+      <Button x:Name="LoginButton" Content="Войти" Margin="0,16,0,0" HorizontalAlignment="Stretch" Click="OnLoginClick"/>
+      <TextBlock x:Name="ErrorText" Foreground="Red" TextWrapping="Wrap" IsVisible="False"/>
+    </StackPanel>
+
+    <TextBlock Grid.Row="2" Text="© EduTrack" HorizontalAlignment="Center" Margin="0,12,0,0" Opacity="0.7"/>
+  </Grid>
+</Window>
+
+

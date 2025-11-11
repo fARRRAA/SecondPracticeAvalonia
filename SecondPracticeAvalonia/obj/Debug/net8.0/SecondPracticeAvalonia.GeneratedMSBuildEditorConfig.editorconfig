@@ -26,3 +26,15 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/Pages/AdminPage.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/Pages/StudentPage.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/Pages/TeacherPage.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/Windows/LoginWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
