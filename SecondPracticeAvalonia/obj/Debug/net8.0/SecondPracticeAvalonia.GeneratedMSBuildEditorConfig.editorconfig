@@ -15,26 +15,29 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SecondPracticeAvalonia
-build_property.ProjectDir = C:\Users\Ильдар\Desktop\Учеба\4-1\учебка\projects\SecondPracticeAvalonia\SecondPracticeAvalonia\
+build_property.ProjectDir = c:\Users\Ильдар\Desktop\Учеба\4-1\учебка\projects\SecondPracticeAvalonia\SecondPracticeAvalonia\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/App.axaml]
+[c:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/MainWindow.axaml]
+[c:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/Pages/AdminPage.axaml]
+[c:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/Pages/AdminPage.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/Pages/StudentPage.axaml]
+[c:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/Pages/LoginPage.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/Pages/TeacherPage.axaml]
+[c:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/Pages/StudentPage.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/Windows/LoginWindow.axaml]
+[c:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/Pages/TeacherPage.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[c:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/Windows/LoginWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

@@ -3,32 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|c:\\users\\\u0438\u043B\u044C\u0434\u0430\u0440\\desktop\\\u0443\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\secondpracticeavalonia\\secondpracticeavalonia\\windows\\loginwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|solutionrelative:windows\\loginwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|c:\\users\\\u0438\u043B\u044C\u0434\u0430\u0440\\desktop\\\u0443\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\secondpracticeavalonia\\secondpracticeavalonia\\pages\\adminpage.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|solutionrelative:pages\\adminpage.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|c:\\users\\\u0438\u043B\u044C\u0434\u0430\u0440\\desktop\\\u0443\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\secondpracticeavalonia\\secondpracticeavalonia\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|solutionrelative:mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|c:\\users\\\u0438\u043B\u044C\u0434\u0430\u0440\\desktop\\\u0443\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\secondpracticeavalonia\\secondpracticeavalonia\\app.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|solutionrelative:app.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|c:\\users\\\u0438\u043B\u044C\u0434\u0430\u0440\\desktop\\\u0443\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\secondpracticeavalonia\\secondpracticeavalonia\\app.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|solutionrelative:app.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|c:\\users\\\u0438\u043B\u044C\u0434\u0430\u0440\\desktop\\\u0443\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\secondpracticeavalonia\\secondpracticeavalonia\\app.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|solutionrelative:app.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|c:\\users\\\u0438\u043B\u044C\u0434\u0430\u0440\\desktop\\\u0443\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\secondpracticeavalonia\\secondpracticeavalonia\\mainwindow.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|solutionrelative:mainwindow.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|c:\\users\\\u0438\u043B\u044C\u0434\u0430\u0440\\desktop\\\u0443\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\secondpracticeavalonia\\secondpracticeavalonia\\pages\\loginpage.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|solutionrelative:pages\\loginpage.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|c:\\users\\\u0438\u043B\u044C\u0434\u0430\u0440\\desktop\\\u0443\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\secondpracticeavalonia\\secondpracticeavalonia\\app.manifest||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|solutionrelative:app.manifest||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|c:\\users\\\u0438\u043B\u044C\u0434\u0430\u0440\\desktop\\\u0443\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\secondpracticeavalonia\\secondpracticeavalonia\\pages\\loginpage.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|solutionrelative:pages\\loginpage.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|c:\\users\\\u0438\u043B\u044C\u0434\u0430\u0440\\desktop\\\u0443\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\secondpracticeavalonia\\secondpracticeavalonia\\windows\\loginwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|solutionrelative:windows\\loginwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|c:\\users\\\u0438\u043B\u044C\u0434\u0430\u0440\\desktop\\\u0443\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\secondpracticeavalonia\\secondpracticeavalonia\\secondpracticeavalonia.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|solutionrelative:secondpracticeavalonia.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|c:\\users\\\u0438\u043B\u044C\u0434\u0430\u0440\\desktop\\\u0443\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\secondpracticeavalonia\\secondpracticeavalonia\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|solutionrelative:mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|c:\\users\\\u0438\u043B\u044C\u0434\u0430\u0440\\desktop\\\u0443\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\secondpracticeavalonia\\secondpracticeavalonia\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|solutionrelative:mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|c:\\users\\\u0438\u043B\u044C\u0434\u0430\u0440\\desktop\\\u0443\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\secondpracticeavalonia\\secondpracticeavalonia\\pages\\adminpage.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|solutionrelative:pages\\adminpage.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|c:\\users\\\u0438\u043B\u044C\u0434\u0430\u0440\\desktop\\\u0443\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\secondpracticeavalonia\\secondpracticeavalonia\\app.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|solutionrelative:app.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|c:\\users\\\u0438\u043B\u044C\u0434\u0430\u0440\\desktop\\\u0443\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\secondpracticeavalonia\\secondpracticeavalonia\\pages\\adminpage.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|solutionrelative:pages\\adminpage.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|c:\\users\\\u0438\u043B\u044C\u0434\u0430\u0440\\desktop\\\u0443\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\secondpracticeavalonia\\secondpracticeavalonia\\pages\\teacherpage.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,12 +55,12 @@
       "RelativeMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|solutionrelative:pages\\studentpage.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|c:\\users\\\u0438\u043B\u044C\u0434\u0430\u0440\\desktop\\\u0443\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\secondpracticeavalonia\\secondpracticeavalonia\\pages\\studentpage.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|solutionrelative:pages\\studentpage.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|c:\\users\\\u0438\u043B\u044C\u0434\u0430\u0440\\desktop\\\u0443\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\secondpracticeavalonia\\secondpracticeavalonia\\app.manifest||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|solutionrelative:app.manifest||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|c:\\users\\\u0438\u043B\u044C\u0434\u0430\u0440\\desktop\\\u0443\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\secondpracticeavalonia\\secondpracticeavalonia\\pages\\adminpage.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|solutionrelative:pages\\adminpage.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|c:\\users\\\u0438\u043B\u044C\u0434\u0430\u0440\\desktop\\\u0443\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\secondpracticeavalonia\\secondpracticeavalonia\\pages\\studentpage.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|solutionrelative:pages\\studentpage.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|c:\\users\\\u0438\u043B\u044C\u0434\u0430\u0440\\desktop\\\u0443\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\secondpracticeavalonia\\secondpracticeavalonia\\windows\\loginwindow.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -59,10 +75,6 @@
       "RelativeMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|c:\\users\\\u0438\u043B\u044C\u0434\u0430\u0440\\desktop\\\u0443\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\secondpracticeavalonia\\secondpracticeavalonia\\secondpracticeavalonia.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|solutionrelative:secondpracticeavalonia.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|c:\\users\\\u0438\u043B\u044C\u0434\u0430\u0440\\desktop\\\u0443\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\secondpracticeavalonia\\secondpracticeavalonia\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F3719ED9-C512-405D-9916-832EE18B5C72}|SecondPracticeAvalonia.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -74,7 +86,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 287,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -105,194 +117,97 @@
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "App.axaml.cs",
-              "DocumentMoniker": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\App.axaml.cs",
-              "RelativeDocumentMoniker": "App.axaml.cs",
-              "ToolTip": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\App.axaml.cs",
-              "RelativeToolTip": "App.axaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvxEAAAA0AAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "LoginWindow.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Windows\\LoginWindow.axaml.cs",
+              "RelativeDocumentMoniker": "Windows\\LoginWindow.axaml.cs",
+              "ToolTip": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Windows\\LoginWindow.axaml.cs",
+              "RelativeToolTip": "Windows\\LoginWindow.axaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T16:24:32.84Z",
+              "WhenOpened": "2025-11-11T20:33:09.12Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "app.manifest",
-              "DocumentMoniker": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\app.manifest",
-              "RelativeDocumentMoniker": "app.manifest",
-              "ToolTip": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\app.manifest",
-              "RelativeToolTip": "app.manifest",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001793|",
-              "WhenOpened": "2025-11-11T16:23:58.978Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TeacherPage.axaml.cs",
-              "DocumentMoniker": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Pages\\TeacherPage.axaml.cs",
-              "RelativeDocumentMoniker": "Pages\\TeacherPage.axaml.cs",
-              "ToolTip": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Pages\\TeacherPage.axaml.cs",
-              "RelativeToolTip": "Pages\\TeacherPage.axaml.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T16:23:22.961Z",
+              "DocumentIndex": 0,
+              "Title": "App.axaml",
+              "DocumentMoniker": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\App.axaml",
+              "RelativeDocumentMoniker": "App.axaml",
+              "ToolTip": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\App.axaml",
+              "RelativeToolTip": "App.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-11T20:31:01.649Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "LoginPage.axaml",
+              "DocumentMoniker": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Pages\\LoginPage.axaml",
+              "RelativeDocumentMoniker": "Pages\\LoginPage.axaml",
+              "ToolTip": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Pages\\LoginPage.axaml",
+              "RelativeToolTip": "Pages\\LoginPage.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-11T20:12:32.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "MainWindow.axaml.cs",
               "DocumentMoniker": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\MainWindow.axaml.cs",
               "RelativeDocumentMoniker": "MainWindow.axaml.cs",
               "ToolTip": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\MainWindow.axaml.cs",
               "RelativeToolTip": "MainWindow.axaml.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAgwBQAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAiwBsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-11T09:18:56.617Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MainWindow.axaml",
-              "DocumentMoniker": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\MainWindow.axaml",
-              "RelativeDocumentMoniker": "MainWindow.axaml",
-              "ToolTip": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\MainWindow.axaml",
-              "RelativeToolTip": "MainWindow.axaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-11-11T09:18:59.088Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "App.axaml",
-              "DocumentMoniker": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\App.axaml",
-              "RelativeDocumentMoniker": "App.axaml",
-              "ToolTip": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\App.axaml",
-              "RelativeToolTip": "App.axaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-11-11T09:27:36.311Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LoginWindow.axaml.cs",
-              "DocumentMoniker": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Windows\\LoginWindow.axaml.cs",
-              "RelativeDocumentMoniker": "Windows\\LoginWindow.axaml.cs",
-              "ToolTip": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Windows\\LoginWindow.axaml.cs",
-              "RelativeToolTip": "Windows\\LoginWindow.axaml.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAIwBMAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T16:04:21.23Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "StudentPage.axaml.cs",
-              "DocumentMoniker": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Pages\\StudentPage.axaml.cs",
-              "RelativeDocumentMoniker": "Pages\\StudentPage.axaml.cs",
-              "ToolTip": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Pages\\StudentPage.axaml.cs",
-              "RelativeToolTip": "Pages\\StudentPage.axaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T16:23:21.538Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "AdminPage.axaml.cs",
               "DocumentMoniker": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Pages\\AdminPage.axaml.cs",
               "RelativeDocumentMoniker": "Pages\\AdminPage.axaml.cs",
               "ToolTip": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Pages\\AdminPage.axaml.cs",
               "RelativeToolTip": "Pages\\AdminPage.axaml.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAwwCIAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-11T15:54:17.123Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.axaml",
+              "DocumentMoniker": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\App.axaml",
+              "RelativeDocumentMoniker": "App.axaml",
+              "ToolTip": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\App.axaml",
+              "RelativeToolTip": "App.axaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-11T09:27:36.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "StudentPage.axaml",
-              "DocumentMoniker": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Pages\\StudentPage.axaml",
-              "RelativeDocumentMoniker": "Pages\\StudentPage.axaml",
-              "ToolTip": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Pages\\StudentPage.axaml",
-              "RelativeToolTip": "Pages\\StudentPage.axaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-11-11T16:23:20.221Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AdminPage.axaml",
-              "DocumentMoniker": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Pages\\AdminPage.axaml",
-              "RelativeDocumentMoniker": "Pages\\AdminPage.axaml",
-              "ToolTip": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Pages\\AdminPage.axaml",
-              "RelativeToolTip": "Pages\\AdminPage.axaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-11-11T16:06:48.904Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "LoginWindow.axaml",
-              "DocumentMoniker": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Windows\\LoginWindow.axaml",
-              "RelativeDocumentMoniker": "Windows\\LoginWindow.axaml",
-              "ToolTip": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Windows\\LoginWindow.axaml",
-              "RelativeToolTip": "Windows\\LoginWindow.axaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-11-11T16:03:03.009Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAzwA4AAAAdAAAAAAAAAA==",
+              "Title": "App.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\App.axaml.cs",
+              "RelativeDocumentMoniker": "App.axaml.cs",
+              "ToolTip": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\App.axaml.cs",
+              "RelativeToolTip": "App.axaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxEAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T16:12:28.986Z",
+              "WhenOpened": "2025-11-11T16:24:32.84Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGIEAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T15:31:41.577Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 5,
               "Title": "SecondPracticeAvalonia.csproj",
               "DocumentMoniker": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\SecondPracticeAvalonia.csproj",
               "RelativeDocumentMoniker": "SecondPracticeAvalonia.csproj",
@@ -305,7 +220,130 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginPage.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Pages\\LoginPage.axaml.cs",
+              "RelativeDocumentMoniker": "Pages\\LoginPage.axaml.cs",
+              "ToolTip": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Pages\\LoginPage.axaml.cs",
+              "RelativeToolTip": "Pages\\LoginPage.axaml.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAuwBEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T20:12:32.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainWindow.axaml",
+              "DocumentMoniker": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\MainWindow.axaml",
+              "RelativeDocumentMoniker": "MainWindow.axaml",
+              "ToolTip": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\MainWindow.axaml",
+              "RelativeToolTip": "MainWindow.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-11T20:01:43.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "app.manifest",
+              "DocumentMoniker": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\app.manifest",
+              "RelativeDocumentMoniker": "app.manifest",
+              "ToolTip": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\app.manifest",
+              "RelativeToolTip": "app.manifest",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001793|",
+              "WhenOpened": "2025-11-11T16:23:58.978Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AdminPage.axaml",
+              "DocumentMoniker": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Pages\\AdminPage.axaml",
+              "RelativeDocumentMoniker": "Pages\\AdminPage.axaml",
+              "ToolTip": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Pages\\AdminPage.axaml",
+              "RelativeToolTip": "Pages\\AdminPage.axaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-11T16:06:48.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TeacherPage.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Pages\\TeacherPage.axaml.cs",
+              "RelativeDocumentMoniker": "Pages\\TeacherPage.axaml.cs",
+              "ToolTip": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Pages\\TeacherPage.axaml.cs",
+              "RelativeToolTip": "Pages\\TeacherPage.axaml.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T16:23:22.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "StudentPage.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Pages\\StudentPage.axaml.cs",
+              "RelativeDocumentMoniker": "Pages\\StudentPage.axaml.cs",
+              "ToolTip": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Pages\\StudentPage.axaml.cs",
+              "RelativeToolTip": "Pages\\StudentPage.axaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T16:23:21.538Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "StudentPage.axaml",
+              "DocumentMoniker": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Pages\\StudentPage.axaml",
+              "RelativeDocumentMoniker": "Pages\\StudentPage.axaml",
+              "ToolTip": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Pages\\StudentPage.axaml",
+              "RelativeToolTip": "Pages\\StudentPage.axaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-11T16:23:20.221Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 15,
+              "Title": "LoginWindow.axaml",
+              "DocumentMoniker": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Windows\\LoginWindow.axaml",
+              "RelativeDocumentMoniker": "Windows\\LoginWindow.axaml",
+              "ToolTip": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Windows\\LoginWindow.axaml",
+              "RelativeToolTip": "Windows\\LoginWindow.axaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-11T16:03:03.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAzwA4AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T16:12:28.986Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGIEAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T15:31:41.577Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\\u0418\u043B\u044C\u0434\u0430\u0440\\Desktop\\\u0423\u0447\u0435\u0431\u0430\\4-1\\\u0443\u0447\u0435\u0431\u043A\u0430\\projects\\SecondPracticeAvalonia\\SecondPracticeAvalonia\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -313,8 +351,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T09:19:07.656Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-11T09:19:07.656Z"
             }
           ]
         },

@@ -1,22 +1,25 @@
-using System.Linq;
-using System.Threading.Tasks;
+using Avalonia;
 using Avalonia.Controls;
-using Avalonia.Interactivity;
+using Avalonia.Markup.Xaml;
 using SecondPracticeAvalonia.Models;
 using SecondPracticeAvalonia.Pages;
+using SecondPracticeAvalonia.Windows;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace SecondPracticeAvalonia.Windows;
+namespace SecondPracticeAvalonia;
 
-public partial class LoginWindow : Window
+public partial class LoginPage : UserControl
 {
-    public LoginWindow()
+    public LoginPage()
     {
+
         InitializeComponent();
         EmailTextBox.Text = "admin@edutrack.com";
         PasswordTextBox.Text = "fara123";
     }
 
-    private async void OnLoginClick(object? sender, RoutedEventArgs e)
+    private async void LoginButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
         ErrorText.IsVisible = false;
         var email = EmailTextBox.Text?.Trim() ?? string.Empty;
@@ -24,7 +27,7 @@ public partial class LoginWindow : Window
 
         if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
         {
-            ShowError("Р’РІРµРґРёС‚Рµ e-mail Рё РїР°СЂРѕР»СЊ.");
+            ShowError("Введите e-mail и пароль.");
             return;
         }
 
@@ -34,50 +37,37 @@ public partial class LoginWindow : Window
 
         if (user is null)
         {
-            ShowError("РќРµРІРµСЂРЅС‹Р№ e-mail РёР»Рё РїР°СЂРѕР»СЊ.");
+            ShowError("Неверный e-mail или пароль.");
             return;
         }
-
-        var main = new MainWindow();
+        var parentWindow = (MainWindow)TopLevel.GetTopLevel(this)!;
 
         void Logout()
         {
-            var loginWindow = new LoginWindow();
-            loginWindow.Show();
-            main.Close();
+            parentWindow.Navigate(new LoginPage(), "EduTrack — Вход");
+
         }
 
         var isTeacher = await Task.Run(() => db.CourseTeachers.Any(ct => ct.TeacherId == user.Id));
         if (isTeacher)
         {
-            var teacherPage = new TeacherPage(user.Id, Logout);
-            main.ShowPage(teacherPage, "EduTrack вЂ” РџСЂРµРїРѕРґР°РІР°С‚РµР»СЊ");
-            main.Show();
-            Close();
+            parentWindow.Navigate(new TeacherPage(user.Id, Logout),"EduTrack — Преподаватель");
+
             return;
         }
 
         var isStudent = await Task.Run(() => db.CourseEnrollments.Any(ce => ce.StudentId == user.Id));
         if (isStudent)
         {
-            var studentPage = new StudentPage(user.Id, Logout);
-            main.ShowPage(studentPage, "EduTrack вЂ” РЎС‚СѓРґРµРЅС‚");
-            main.Show();
-            Close();
+            parentWindow.Navigate(new StudentPage(user.Id, Logout), "EduTrack — Студент");
             return;
         }
 
-        var adminPage = new AdminPage(user.Id, Logout);
-        main.ShowPage(adminPage, "EduTrack вЂ” РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ");
-        main.Show();
-        Close();
+        parentWindow.Navigate(new AdminPage(user.Id, Logout), "EduTrack — Администратор");
     }
-
     private void ShowError(string message)
     {
         ErrorText.Text = message;
         ErrorText.IsVisible = true;
     }
 }
-
-
