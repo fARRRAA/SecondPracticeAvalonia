@@ -5,19 +5,19 @@
              
              x:Class="SecondPracticeAvalonia.LoginPage" Width="560" Height="460">
   <Grid RowDefinitions="Auto,*,Auto">
-    <TextBlock Text="EduTrack — управление онлайн-обучением"
+    <TextBlock Text="EduTrack - online learning management"
                FontSize="16" FontWeight="Bold" Margin="20,20,20,0"/>
 
     <StackPanel Grid.Row="1" Spacing="8" Margin="20">
       <TextBlock Text="E-mail"/>
       <TextBox x:Name="EmailTextBox" Watermark="name@example.com"/>
 
-      <TextBlock Text="Пароль" Margin="0,8,0,0"/>
+      <TextBlock Text="Password" Margin="0,8,0,0"/>
       <TextBox x:Name="PasswordTextBox" PasswordChar="•"/>
 
-      <CheckBox x:Name="RememberCheck" Content="Запомнить меня" Margin="0,8,0,0"/>
+      <CheckBox x:Name="RememberCheck" Content="Remember me" Margin="0,8,0,0"/>
 
-      <Button x:Name="LoginButton" Content="Войти" Margin="0,16,0,0" HorizontalAlignment="Stretch" Click="LoginButton_Click"/>
+      <Button x:Name="LoginButton" Content="Enter" Margin="0,16,0,0" HorizontalAlignment="Stretch" Click="LoginButton_Click"/>
       <TextBlock x:Name="ErrorText" Foreground="Red" TextWrapping="Wrap" IsVisible="False"/>
     </StackPanel>
 

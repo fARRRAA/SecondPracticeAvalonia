@@ -1,0 +1,69 @@
+<Window xmlns="https://github.com/avaloniaui"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		mc:Ignorable="d"
+		x:Class="SecondPracticeAvalonia.Windows.AddOrEditTest"
+		Title="Add or Edit Test"
+		Width="1000" Height="750">
+
+
+	<StackPanel Margin="20">
+		<TextBlock Text="Add or Edit Test" FontSize="22" FontWeight="Bold" Margin="0,0,0,5" />
+
+		<StackPanel  >
+			<TextBlock Text="Test Information" FontWeight="Bold" FontSize="16"  Margin="0,0,0,5"/>
+
+			<StackPanel   Margin="0,10,0,5">
+				<TextBlock Text="Title:" VerticalAlignment="Center" Margin="0,0,10,10"/>
+				<TextBox Text="{Binding Title, Mode=TwoWay}"/>
+			</StackPanel>
+
+			<StackPanel  Margin="0,10,0,5">
+				<TextBlock Text="Description:" VerticalAlignment="Center" Margin="0,0,10,5"/>
+				<TextBox Text="{Binding Description, Mode=TwoWay}" AcceptsReturn="True" Height="60"/>
+			</StackPanel>
+
+			<StackPanel  Margin="0,10,0,5" Orientation="Horizontal">
+				<TextBlock Text="Max Score:" VerticalAlignment="Center" Margin="0,0,10,5"/>
+				<TextBox Text="{Binding MaxScore, Mode=TwoWay}" Margin="0,0,20,0"/>
+				<TextBlock Text="Deadline:" VerticalAlignment="Center"  Margin="0,0,10,5"/>
+				<DatePicker SelectedDate="{Binding Deadline, Mode=TwoWay}" />
+			</StackPanel>
+
+			<StackPanel  Margin="0,5,0,5" Orientation="Horizontal">
+				<CheckBox IsChecked="{Binding IsRequired, Mode=TwoWay}" VerticalAlignment="Center"/>
+				<TextBlock Text="Is Required:" VerticalAlignment="Center" Margin="0,0,10,0"/>
+			</StackPanel>
+
+			<TextBlock Text="Questions" FontWeight="Bold" FontSize="16"  Margin="0,10,0,10"/>
+
+			<DataGrid x:Name="QuestionsGrid"  AutoGenerateColumns="False" IsReadOnly="True">
+				<DataGrid.Columns>
+					<DataGridTextColumn Header="Order" Binding="{Binding OrderIndex}" Width="60"/>
+					<DataGridTextColumn Header="Question" Binding="{Binding QuestionText}" Width="*"/>
+					<DataGridTextColumn Header="Type" Binding="{Binding QuestionType}" Width="100"/>
+					<DataGridTextColumn Header="Points" Binding="{Binding Points}" Width="80"/>
+					<DataGridTemplateColumn Header="Actions" Width="150">
+						<DataGridTemplateColumn.CellTemplate>
+							<DataTemplate>
+								<StackPanel Orientation="Horizontal" Spacing="5">
+									<Button Name="EditQuestion" Content="Edit" Tag="{Binding}" Click="EditQuestion_Click"/>
+									<Button Name="DeleteQuestion" Content="Delete" Tag="{Binding}" Click="DeleteQuestion_Click"/>
+								</StackPanel>
+							</DataTemplate>
+						</DataGridTemplateColumn.CellTemplate>
+					</DataGridTemplateColumn>
+				</DataGrid.Columns>
+			</DataGrid>
+		</StackPanel>
+
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Spacing="10" Margin="0,40,0,0">
+			<Button Name="btnAddQuestion" Content="Add Question" Width="120" Click="btnAddQuestion_Click"/>
+			<Button Name="btnClose" Content="Close" Width="100" Click="btnClose_Click"/>
+			<Button Name="btnSave" Content="Save Test" Width="100" Click="btnSave_Click"/>
+		</StackPanel>
+	</StackPanel>
+
+</Window>
+

@@ -1,9 +1,8 @@
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
-using SecondPracticeAvalonia.Models;
+using SecondPracticeAvalonia.Data;
 using SecondPracticeAvalonia.Pages;
-using SecondPracticeAvalonia.Windows;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -15,7 +14,7 @@ public partial class LoginPage : UserControl
     {
 
         InitializeComponent();
-        EmailTextBox.Text = "admin@edutrack.com";
+        EmailTextBox.Text = "teacher2@edutrack.com";
         PasswordTextBox.Text = "fara123";
     }
 

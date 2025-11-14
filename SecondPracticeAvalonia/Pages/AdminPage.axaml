@@ -1,43 +1,78 @@
 <UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             x:Class="SecondPracticeAvalonia.Pages.AdminPage">
-  <DockPanel>
-    <Border DockPanel.Dock="Top" Background="#2E7D32" Padding="12">
-      <Grid ColumnDefinitions="Auto,*,Auto,Auto" VerticalAlignment="Center">
-        <TextBlock Text="Администратор" Foreground="White" FontSize="16" FontWeight="Bold"/>
-        <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="8" HorizontalAlignment="Center">
-          <Button Content="Курсы" Name="BtnCourses" Click="OnCoursesClick"/>
-          <Button Content="Пользователи" Name="BtnUsers" Click="OnUsersClick"/>
-        </StackPanel>
-        <TextBlock Grid.Column="2" Name="UserInfoText" Foreground="White" Margin="8,0" VerticalAlignment="Center"/>
-        <Button Grid.Column="3" Content="Выход" Click="OnLogoutClick"/>
-      </Grid>
-    </Border>
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 x:Class="SecondPracticeAvalonia.Pages.AdminPage">
+	<DockPanel>
+		<Border DockPanel.Dock="Top" Background="#2E7D32" Padding="12">
+			<Grid ColumnDefinitions="Auto,*,Auto,Auto" VerticalAlignment="Center">
+				<TextBlock Text="Администратор" Foreground="White" FontSize="16" FontWeight="Bold"/>
+				<StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="8" HorizontalAlignment="Center">
+					<Button Content="Курсы" Name="BtnCourses" Click="OnCoursesClick"/>
+					<Button Content="Пользователи" Name="BtnUsers" Click="OnUsersClick"/>
+				</StackPanel>
+				<TextBlock Grid.Column="2" Name="UserInfoText" Foreground="White" Margin="8,0" VerticalAlignment="Center"/>
+				<Button Grid.Column="3" Content="Выход" Click="OnLogoutClick"/>
+			</Grid>
+		</Border>
 
-    <Grid Margin="12">
-      <DataGrid Name="CoursesGrid" AutoGenerateColumns="False" IsReadOnly="True">
-        <DataGrid.Columns>
-          <DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
-          <DataGridTextColumn Header="Название" Binding="{Binding Title}" Width="*"/>
-          <DataGridTextColumn Header="Категория" Binding="{Binding CategoryName}"/>
-          <DataGridTextColumn Header="Цена" Binding="{Binding Price}"/>
-          <DataGridTextColumn Header="Рейтинг" Binding="{Binding Rating}"/>
-        </DataGrid.Columns>
-      </DataGrid>
+		<Grid Margin="12">
+			<StackPanel Orientation="Vertical">
+				<StackPanel Margin="0,12" Orientation="Horizontal" Spacing="10">
+					<Button Name="AddCourse" Content="Добавить курс" Tag="{Binding}" Click="AddCourse_Click" IsVisible="True"/>
+					<Button Name="AddUser" Content="Добавить пользователя" Tag="{Binding}" Click="AddUser_Click" IsVisible="False"/>
+				</StackPanel>
+				<DataGrid Name="CoursesGrid" AutoGenerateColumns="False" IsReadOnly="True">
+					<DataGrid.Columns>
+						<DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
+						<DataGridTextColumn Header="Название" Binding="{Binding Title}" Width="250"/>
+						<DataGridTextColumn Header="Категория" Binding="{Binding Category.Name}"/>
+						<DataGridTextColumn Header="Цена" Binding="{Binding Price}"/>
+						<DataGridTextColumn Header="Рейтинг" Binding="{Binding Rating}"/>
+						<DataGridTemplateColumn Header="Действия" Width="400">
+							<DataGridTemplateColumn.CellTemplate>
+								<DataTemplate>
+									<StackPanel Orientation="Horizontal" Spacing="5">
+										<Button Name="EditCourse" Content="Редактировать" Tag="{Binding}" Click="EditCourse_Click"/>
+										<Button Name="AssignTeachers" Content="Преподаватели" Tag="{Binding}" Click="AssignTeachers_Click"/>
+										<Button Name="DeleteCourse" Content="Удалить" Tag="{Binding}" Click="DeleteCourse_Click"/>
+									</StackPanel>
+								</DataTemplate>
+							</DataGridTemplateColumn.CellTemplate>
+						</DataGridTemplateColumn>
+					</DataGrid.Columns>
+				</DataGrid>
+			</StackPanel>
 
-      <DataGrid Name="UsersGrid" AutoGenerateColumns="False" IsReadOnly="True" IsVisible="False">
-        <DataGrid.Columns>
-          <DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
-          <DataGridTextColumn Header="E-mail" Binding="{Binding Email}" Width="2*"/>
-          <DataGridTextColumn Header="Имя" Binding="{Binding FirstName}"/>
-          <DataGridTextColumn Header="Фамилия" Binding="{Binding LastName}"/>
-          <DataGridCheckBoxColumn Header="Активен" Binding="{Binding IsActive}"/>
-          <DataGridCheckBoxColumn Header="Заблокирован" Binding="{Binding IsBlocked}"/>
-        </DataGrid.Columns>
-      </DataGrid>
-    </Grid>
-  </DockPanel>
+			<StackPanel Orientation="Vertical" IsVisible="False" Name="UsersPanel">
+				<StackPanel Margin="0,12" Orientation="Horizontal" Spacing="10">
+					<Button Name="AddUserInPanel" Content="Добавить пользователя" Tag="{Binding}" Click="AddUser_Click"/>
+				</StackPanel>
+				<DataGrid Name="UsersGrid" AutoGenerateColumns="False" IsReadOnly="True">
+					<DataGrid.Columns>
+						<DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
+						<DataGridTextColumn Header="E-mail" Binding="{Binding Email}" Width="300"/>
+						<DataGridTextColumn Header="Имя" Binding="{Binding FirstName}"/>
+						<DataGridTextColumn Header="Фамилия" Binding="{Binding LastName}"/>
+						<DataGridTextColumn Header="Должность" Binding="{Binding Role.Name}"/>
+<!--						<DataGridCheckBoxColumn Header="Активен" Binding="{Binding IsActive}"/>
+-->						<DataGridCheckBoxColumn Header="Заблокирован" Binding="{Binding IsBlocked}"/>
+						<DataGridTemplateColumn Header="Действия" Width="350">
+							<DataGridTemplateColumn.CellTemplate>
+								<DataTemplate>
+									<StackPanel Orientation="Horizontal" Spacing="5">
+										<Button Name="EditUser" Content="Редактировать" Tag="{Binding}" Click="EditUser_Click"/>
+										<Button Name="ToggleBlockUser" Content="Блок/Разбл" Tag="{Binding}" Click="ToggleBlockUser_Click"/>
+										<Button Name="DeleteUser" Content="Удалить" Tag="{Binding}" Click="DeleteUser_Click"/>
+									</StackPanel>
+								</DataTemplate>
+							</DataGridTemplateColumn.CellTemplate>
+						</DataGridTemplateColumn>
+					</DataGrid.Columns>
+				</DataGrid>
+			</StackPanel>
+		</Grid>
+	</DockPanel>
 </UserControl>
+
 
 
 

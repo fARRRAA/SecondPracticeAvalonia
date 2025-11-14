@@ -1,0 +1,90 @@
+<Window xmlns="https://github.com/avaloniaui"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		mc:Ignorable="d"
+		x:Class="Srez.Windows.SuppliersWindow"
+		Title="Поставщики материала"
+		Icon="avares://Srez/Images/Мозаика.ico"
+		Width="970" Height="600">
+	<DockPanel>
+		<Border DockPanel.Dock="Top" Background="{StaticResource Color.SecondaryBackground}" Padding="12">
+			<StackPanel Orientation="Horizontal" Spacing="8">
+				<Image Source="avares://Srez/Images/Мозаика.png" Height="24" Stretch="Uniform"/>
+				<TextBlock Name="TitleText" Text="Поставщики материала" Foreground="#0D0D0D" FontSize="18" FontWeight="Bold"/>
+			</StackPanel>
+		</Border>
+
+		<ScrollViewer Margin="12">
+			<StackPanel>
+				<Border Background="#FFFFFF" BorderBrush="#E0E0E0" BorderThickness="1" CornerRadius="6" Padding="12" Margin="0,0,0,12">
+					<StackPanel Orientation="Vertical" Spacing="8">
+						<StackPanel Orientation="Horizontal" Spacing="8">
+							<ComboBox Name="ProductTypeCombo" Width="220"  HorizontalAlignment="Left">
+								<ComboBox.ItemTemplate>
+									<DataTemplate>
+										<TextBlock Text="{Binding Name}" />
+									</DataTemplate>
+								</ComboBox.ItemTemplate>
+						</ComboBox>
+							<TextBox Name="UsedAmountText" Width="160" Watermark="Кол-во сырья (целые)"/>
+							<TextBox Name="Param1Text" Width="140" Watermark="Параметр 1 (веще.)"/>
+							<TextBox Name="Param2Text" Width="140" Watermark="Параметр 2 (веще.)"/>
+							<Button Name="CalcBtn" Content="Рассчитать выход" Click="CalcBtn_Click"/>
+						</StackPanel>
+						<TextBlock Name="CalcResultText" FontSize="13" FontWeight="SemiBold" Foreground="#0D47A1"/>
+					</StackPanel>
+				</Border>
+
+				<ListBox Name="SuppliersList"
+						 Background="Transparent"
+						 BorderThickness="0"
+						 SelectionMode="Single">
+					<ListBox.Styles>
+						<Style Selector="ListBoxItem">
+							<Setter Property="Background" Value="Transparent"/>
+							<Setter Property="BorderThickness" Value="0"/>
+							<Setter Property="Padding" Value="0"/>
+							<Setter Property="Margin" Value="0,0,0,8"/>
+						</Style>
+						<Style Selector="ListBoxItem:selected">
+							<Setter Property="Background" Value="Transparent"/>
+						</Style>
+						<Style Selector="ListBoxItem:pointerover">
+							<Setter Property="Background" Value="Transparent"/>
+						</Style>
+					</ListBox.Styles>
+					<ListBox.ItemTemplate>
+						<DataTemplate>
+							<Border BorderBrush="#CCCCCC" BorderThickness="1"
+									CornerRadius="4"
+									Padding="16"
+									Background="White">
+								<Grid ColumnDefinitions="*,Auto,Auto">
+									<TextBlock Grid.Column="0" FontSize="14" FontWeight="Bold" VerticalAlignment="Center">
+										<Run Text="{Binding Supplier.Name}"/>
+									</TextBlock>
+									<TextBlock Grid.Column="1" FontSize="14" Margin="16,0" VerticalAlignment="Center">
+										<Run Text="Рейтинг: " FontWeight="SemiBold"/>
+										<Run Text="{Binding Supplier.Rating, TargetNullValue='-'}"/>
+									</TextBlock>
+									<TextBlock Grid.Column="2" FontSize="14" VerticalAlignment="Center">
+										<Run Text="Дата начала: " FontWeight="SemiBold"/>
+										<Run Text="{Binding Supplier.StartDate, StringFormat='{}{0:dd.MM.yyyy}'}"/>
+									</TextBlock>
+								</Grid>
+							</Border>
+						</DataTemplate>
+					</ListBox.ItemTemplate>
+				</ListBox>
+		</StackPanel>
+		</ScrollViewer>
+
+		<Border DockPanel.Dock="Bottom" Padding="12" Background="#F5F5F5">
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+				<Button Name="BtnBack" Content="Назад" Width="100" Click="BtnBack_Click"/>
+			</StackPanel>
+		</Border>
+	</DockPanel>
+</Window>
+

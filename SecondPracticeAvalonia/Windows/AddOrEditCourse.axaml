@@ -1,0 +1,76 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        x:Class="SecondPracticeAvalonia.Windows.AddOrEditCourse"
+        Title="Add or Edit Course"
+        Width="1000" Height="750">
+
+    <ScrollViewer>
+        <StackPanel Margin="20" Spacing="10">
+            <TextBlock Text="Add or Edit Course" FontSize="22" FontWeight="Bold" Margin="0,0,0,10"/>
+
+            <!-- Title -->
+            <TextBlock Text="Title"/>
+            <TextBox Text="{Binding Title, Mode=TwoWay}"/>
+
+            <!-- Description -->
+            <TextBlock Text="Description"/>
+            <TextBox Text="{Binding Description, Mode=TwoWay}" AcceptsReturn="True" Height="100"/>
+                        <!-- DurationHours -->
+            <TextBlock Text="Duration (hours)"/>
+            <TextBox Text="{Binding DurationHours, Mode=TwoWay}" />
+
+            <!-- Price -->
+            <TextBlock Text="Price"/>
+            <TextBox Text="{Binding Price, Mode=TwoWay}"/>
+
+            <!-- Category -->
+            <TextBlock Text="Category"/>
+            <ComboBox x:Name="cbCategory" Width="300">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Name}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <!-- Level -->
+            <TextBlock Text="Level"/>
+            <ComboBox x:Name="cbLevel" Width="300">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Name}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <!-- Format -->
+            <TextBlock Text="Format"/>
+            <ComboBox x:Name="cbFormat" Width="300">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Name}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <!-- Status -->
+            <TextBlock Text="Status"/>
+            <ComboBox x:Name="cbStatus" Width="300">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Name}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <!-- Buttons -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Spacing="10" Margin="0,20,0,0">
+                <Button Name="btnClose" Content="Close" Width="100" Click="btnClose_Click"/>
+                <Button Name="btnSave" Content="Save" Width="100" Click="btnSave_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Window>

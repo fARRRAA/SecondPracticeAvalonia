@@ -1,0 +1,62 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        x:Class="SecondPracticeAvalonia.Windows.AddOrEditQuestion"
+        Title="Add or Edit Question"
+        Width="800" Height="700">
+
+    <StackPanel Margin="20">
+        <TextBlock Text="Add or Edit Question" FontSize="22" FontWeight="Bold" Margin="0,0,0,10" />
+
+        <StackPanel Margin="0,0,0,10">
+            <TextBlock Text="Question Text:" VerticalAlignment="Center" />
+            <TextBox Text="{Binding QuestionText, Mode=TwoWay}" AcceptsReturn="True" Margin="0,10,0,0" Height="80"/>
+        </StackPanel>
+
+        <StackPanel  Margin="0,10,0,10">
+            <TextBlock Text="Question Type:" VerticalAlignment="Center" Margin="0,0,10,0"/>
+            <ComboBox x:Name="QuestionTypeComboBox"  Margin="0,10,20,0">
+                <ComboBoxItem Content="multiple_choice" IsSelected="True"/>
+                <ComboBoxItem Content="single_choice"/>
+                <ComboBoxItem Content="text"/>
+            </ComboBox>
+            <TextBlock Text="Points:" VerticalAlignment="Center" Margin="0,10,10,0"/>
+            <TextBox Text="{Binding Points, Mode=TwoWay}" />
+        </StackPanel>
+
+        <StackPanel  Margin="0,10,0,10">
+            <TextBlock Text="Order Index:" VerticalAlignment="Center" Margin="0,0,10,0"/>
+            <TextBox Text="{Binding OrderIndex, Mode=TwoWay}"/>
+        </StackPanel>
+
+        <Grid >
+            <TextBlock Text="Answer Options" FontWeight="Bold" FontSize="16" Margin="0,0,0,10"/>
+            <DataGrid x:Name="OptionsGrid"  AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Text" Binding="{Binding OptionText}" Width="*"/>
+                    <DataGridCheckBoxColumn Header="Is Correct" Binding="{Binding IsCorrect}" Width="100"/>
+                    <DataGridTextColumn Header="Order" Binding="{Binding OrderIndex}" Width="80"/>
+                    <DataGridTemplateColumn Header="Actions" Width="150">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Spacing="5">
+                                    <Button Name="EditOption" Content="Edit" Tag="{Binding}" Click="EditOption_Click"/>
+                                    <Button Name="DeleteOption" Content="Delete" Tag="{Binding}" Click="DeleteOption_Click"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+        <StackPanel  Orientation="Horizontal" HorizontalAlignment="Right" Spacing="10" Margin="0,40,0,0">
+            <Button Name="btnAddOption" Content="Add Option" Width="120" Click="btnAddOption_Click"/>
+            <Button Name="btnClose" Content="Close" Width="100" Click="btnClose_Click"/>
+            <Button Name="btnSave" Content="Save" Width="100" Click="btnSave_Click"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
+

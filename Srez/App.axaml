@@ -1,0 +1,29 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="Srez.App"
+             RequestedThemeVariant="Light">
+
+    <Application.Resources>
+        <SolidColorBrush x:Key="Color.PrimaryBackground" Color="#FFFFFFFF"/>
+        <SolidColorBrush x:Key="Color.SecondaryBackground" Color="#ABCFCE"/>
+        <SolidColorBrush x:Key="Color.Accent" Color="#546F94"/>
+
+        <FontFamily x:Key="AppFont">avares://Srez/Font/Comic%20Sans%20MS.ttf#Comic Sans MS, Comic Sans MS</FontFamily>
+    </Application.Resources>
+
+    <Application.Styles>
+        <FluentTheme />
+        <Style Selector="TextBlock">
+            <Setter Property="FontFamily" Value="{StaticResource AppFont}"/>
+        </Style>
+        <Style Selector="Button">
+            <Setter Property="FontFamily" Value="{StaticResource AppFont}"/>
+            <Setter Property="Background" Value="{StaticResource Color.Accent}"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        <Style Selector="Window">
+            <Setter Property="Background" Value="{StaticResource Color.PrimaryBackground}"/>
+            <Setter Property="FontFamily" Value="{StaticResource AppFont}"/>
+        </Style>
+    </Application.Styles>
+</Application>

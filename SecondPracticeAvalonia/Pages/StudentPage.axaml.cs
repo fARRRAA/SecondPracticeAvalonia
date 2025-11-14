@@ -4,7 +4,8 @@ using System.Threading.Tasks;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
-using SecondPracticeAvalonia.Models;
+using SecondPracticeAvalonia.Data;
+
 
 namespace SecondPracticeAvalonia.Pages;
 

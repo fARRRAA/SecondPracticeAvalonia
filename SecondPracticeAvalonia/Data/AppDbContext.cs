@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace SecondPracticeAvalonia.Models;
+namespace SecondPracticeAvalonia.Data;
 
 public partial class AppDbContext : DbContext
 {
@@ -21,7 +21,11 @@ public partial class AppDbContext : DbContext
 
     public virtual DbSet<Assignment> Assignments { get; set; }
 
+    public virtual DbSet<AssignmentStatus> AssignmentStatuses { get; set; }
+
     public virtual DbSet<AssignmentSubmission> AssignmentSubmissions { get; set; }
+
+    public virtual DbSet<AssignmentType> AssignmentTypes { get; set; }
 
     public virtual DbSet<Badge> Badges { get; set; }
 
@@ -33,11 +37,17 @@ public partial class AppDbContext : DbContext
 
     public virtual DbSet<CourseEnrollment> CourseEnrollments { get; set; }
 
+    public virtual DbSet<CourseFormat> CourseFormats { get; set; }
+
+    public virtual DbSet<CourseLevel> CourseLevels { get; set; }
+
     public virtual DbSet<CourseModule> CourseModules { get; set; }
 
     public virtual DbSet<CourseReview> CourseReviews { get; set; }
 
     public virtual DbSet<CourseStatistic> CourseStatistics { get; set; }
+
+    public virtual DbSet<CourseStatus> CourseStatuses { get; set; }
 
     public virtual DbSet<CourseTeacher> CourseTeachers { get; set; }
 
@@ -55,6 +65,8 @@ public partial class AppDbContext : DbContext
 
     public virtual DbSet<NotificationSetting> NotificationSettings { get; set; }
 
+    public virtual DbSet<NotificationType> NotificationTypes { get; set; }
+
     public virtual DbSet<Promotion> Promotions { get; set; }
 
     public virtual DbSet<PromotionUsage> PromotionUsages { get; set; }
@@ -71,25 +83,17 @@ public partial class AppDbContext : DbContext
 
     public virtual DbSet<UserBadge> UserBadges { get; set; }
 
+    public virtual DbSet<UserRole> UserRoles { get; set; }
+
     public virtual DbSet<Webinar> Webinars { get; set; }
 
     public virtual DbSet<WebinarParticipant> WebinarParticipants { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseNpgsql("Host=micialware.ru;Port=5432;Database=secondpr_db;Username=trieco_admin;Password=trieco");
+        => optionsBuilder.UseNpgsql("Host=micialware.ru;Port=5432;Database=secondprdb;Username=trieco_admin;Password=trieco");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder
-            .HasPostgresEnum("assignment_status", new[] { "pending", "submitted", "checked", "rejected" })
-            .HasPostgresEnum("assignment_type", new[] { "homework", "test", "project", "quiz" })
-            .HasPostgresEnum("course_format", new[] { "video", "text", "webinar", "mixed" })
-            .HasPostgresEnum("course_level", new[] { "beginner", "advanced", "expert" })
-            .HasPostgresEnum("course_status", new[] { "draft", "published", "archived" })
-            .HasPostgresEnum("notification_type", new[] { "deadline", "new_material", "grade", "announcement", "message" })
-            .HasPostgresEnum("user_role", new[] { "admin", "teacher", "student" });
-
         modelBuilder.Entity<Announcement>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("announcements_pkey");
@@ -173,6 +177,7 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.Title)
                 .HasMaxLength(255)
                 .HasColumnName("title");
+            entity.Property(e => e.TypeId).HasColumnName("type_id");
             entity.Property(e => e.UpdatedAt)
                 .HasDefaultValueSql("CURRENT_TIMESTAMP")
                 .HasColumnType("timestamp without time zone")
@@ -182,6 +187,26 @@ public partial class AppDbContext : DbContext
                 .HasForeignKey(d => d.LessonId)
                 .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("assignments_lesson_id_fkey");
+
+            entity.HasOne(d => d.Type).WithMany(p => p.Assignments)
+                .HasForeignKey(d => d.TypeId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("assignments_type_id_fkey");
+        });
+
+        modelBuilder.Entity<AssignmentStatus>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("assignment_statuses_pkey");
+
+            entity.ToTable("assignment_statuses", tb => tb.HasComment("Справочник статусов заданий"));
+
+            entity.HasIndex(e => e.Name, "assignment_statuses_name_key").IsUnique();
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Description).HasColumnName("description");
+            entity.Property(e => e.Name)
+                .HasMaxLength(50)
+                .HasColumnName("name");
         });
 
         modelBuilder.Entity<AssignmentSubmission>(entity =>
@@ -203,6 +228,9 @@ public partial class AppDbContext : DbContext
                 .HasMaxLength(500)
                 .HasColumnName("file_url");
             entity.Property(e => e.Score).HasColumnName("score");
+            entity.Property(e => e.StatusId)
+                .HasDefaultValue(1)
+                .HasColumnName("status_id");
             entity.Property(e => e.StudentId).HasColumnName("student_id");
             entity.Property(e => e.SubmittedAt)
                 .HasDefaultValueSql("CURRENT_TIMESTAMP")
@@ -220,10 +248,29 @@ public partial class AppDbContext : DbContext
                 .OnDelete(DeleteBehavior.SetNull)
                 .HasConstraintName("assignment_submissions_checked_by_fkey");
 
+            entity.HasOne(d => d.Status).WithMany(p => p.AssignmentSubmissions)
+                .HasForeignKey(d => d.StatusId)
+                .HasConstraintName("assignment_submissions_status_id_fkey");
+
             entity.HasOne(d => d.Student).WithMany(p => p.AssignmentSubmissionStudents)
                 .HasForeignKey(d => d.StudentId)
                 .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("assignment_submissions_student_id_fkey");
+        });
+
+        modelBuilder.Entity<AssignmentType>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("assignment_types_pkey");
+
+            entity.ToTable("assignment_types", tb => tb.HasComment("Справочник типов заданий"));
+
+            entity.HasIndex(e => e.Name, "assignment_types_name_key").IsUnique();
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Description).HasColumnName("description");
+            entity.Property(e => e.Name)
+                .HasMaxLength(50)
+                .HasColumnName("name");
         });
 
         modelBuilder.Entity<Badge>(entity =>
@@ -288,6 +335,8 @@ public partial class AppDbContext : DbContext
 
             entity.HasIndex(e => e.CategoryId, "idx_courses_category");
 
+            entity.HasIndex(e => e.StatusId, "idx_courses_status");
+
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.CategoryId).HasColumnName("category_id");
             entity.Property(e => e.CoverImageUrl)
@@ -300,9 +349,11 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.CreatedBy).HasColumnName("created_by");
             entity.Property(e => e.Description).HasColumnName("description");
             entity.Property(e => e.DurationHours).HasColumnName("duration_hours");
+            entity.Property(e => e.FormatId).HasColumnName("format_id");
             entity.Property(e => e.IsFeatured)
                 .HasDefaultValue(false)
                 .HasColumnName("is_featured");
+            entity.Property(e => e.LevelId).HasColumnName("level_id");
             entity.Property(e => e.Price)
                 .HasPrecision(10, 2)
                 .HasDefaultValueSql("0.00")
@@ -311,6 +362,9 @@ public partial class AppDbContext : DbContext
                 .HasPrecision(3, 2)
                 .HasDefaultValueSql("0.00")
                 .HasColumnName("rating");
+            entity.Property(e => e.StatusId)
+                .HasDefaultValue(1)
+                .HasColumnName("status_id");
             entity.Property(e => e.Title)
                 .HasMaxLength(255)
                 .HasColumnName("title");
@@ -334,6 +388,20 @@ public partial class AppDbContext : DbContext
                 .HasForeignKey(d => d.CreatedBy)
                 .OnDelete(DeleteBehavior.SetNull)
                 .HasConstraintName("courses_created_by_fkey");
+
+            entity.HasOne(d => d.Format).WithMany(p => p.Courses)
+                .HasForeignKey(d => d.FormatId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("courses_format_id_fkey");
+
+            entity.HasOne(d => d.Level).WithMany(p => p.Courses)
+                .HasForeignKey(d => d.LevelId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("courses_level_id_fkey");
+
+            entity.HasOne(d => d.Status).WithMany(p => p.Courses)
+                .HasForeignKey(d => d.StatusId)
+                .HasConstraintName("courses_status_id_fkey");
         });
 
         modelBuilder.Entity<CourseCategory>(entity =>
@@ -397,6 +465,36 @@ public partial class AppDbContext : DbContext
                 .HasForeignKey(d => d.StudentId)
                 .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("course_enrollments_student_id_fkey");
+        });
+
+        modelBuilder.Entity<CourseFormat>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("course_formats_pkey");
+
+            entity.ToTable("course_formats", tb => tb.HasComment("Справочник форматов курсов"));
+
+            entity.HasIndex(e => e.Name, "course_formats_name_key").IsUnique();
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Description).HasColumnName("description");
+            entity.Property(e => e.Name)
+                .HasMaxLength(50)
+                .HasColumnName("name");
+        });
+
+        modelBuilder.Entity<CourseLevel>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("course_levels_pkey");
+
+            entity.ToTable("course_levels", tb => tb.HasComment("Справочник уровней сложности курсов"));
+
+            entity.HasIndex(e => e.Name, "course_levels_name_key").IsUnique();
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Description).HasColumnName("description");
+            entity.Property(e => e.Name)
+                .HasMaxLength(50)
+                .HasColumnName("name");
         });
 
         modelBuilder.Entity<CourseModule>(entity =>
@@ -504,6 +602,21 @@ public partial class AppDbContext : DbContext
                 .HasForeignKey<CourseStatistic>(d => d.CourseId)
                 .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("course_statistics_course_id_fkey");
+        });
+
+        modelBuilder.Entity<CourseStatus>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("course_statuses_pkey");
+
+            entity.ToTable("course_statuses", tb => tb.HasComment("Справочник статусов курсов"));
+
+            entity.HasIndex(e => e.Name, "course_statuses_name_key").IsUnique();
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Description).HasColumnName("description");
+            entity.Property(e => e.Name)
+                .HasMaxLength(50)
+                .HasColumnName("name");
         });
 
         modelBuilder.Entity<CourseTeacher>(entity =>
@@ -731,7 +844,13 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.Title)
                 .HasMaxLength(255)
                 .HasColumnName("title");
+            entity.Property(e => e.TypeId).HasColumnName("type_id");
             entity.Property(e => e.UserId).HasColumnName("user_id");
+
+            entity.HasOne(d => d.Type).WithMany(p => p.Notifications)
+                .HasForeignKey(d => d.TypeId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("notifications_type_id_fkey");
 
             entity.HasOne(d => d.User).WithMany(p => p.Notifications)
                 .HasForeignKey(d => d.UserId)
@@ -780,6 +899,21 @@ public partial class AppDbContext : DbContext
                 .HasForeignKey<NotificationSetting>(d => d.UserId)
                 .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("notification_settings_user_id_fkey");
+        });
+
+        modelBuilder.Entity<NotificationType>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("notification_types_pkey");
+
+            entity.ToTable("notification_types", tb => tb.HasComment("Справочник типов уведомлений"));
+
+            entity.HasIndex(e => e.Name, "notification_types_name_key").IsUnique();
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Description).HasColumnName("description");
+            entity.Property(e => e.Name)
+                .HasMaxLength(50)
+                .HasColumnName("name");
         });
 
         modelBuilder.Entity<Promotion>(entity =>
@@ -950,9 +1084,11 @@ public partial class AppDbContext : DbContext
         {
             entity.HasKey(e => e.Id).HasName("users_pkey");
 
-            entity.ToTable("users", tb => tb.HasComment("Пользователи системы (студенты, преподаватели, администраторы)"));
+            entity.ToTable("users", tb => tb.HasComment("Пользователи системы"));
 
             entity.HasIndex(e => e.Email, "idx_users_email");
+
+            entity.HasIndex(e => e.RoleId, "idx_users_role");
 
             entity.HasIndex(e => e.Email, "users_email_key").IsUnique();
 
@@ -988,10 +1124,16 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.Phone)
                 .HasMaxLength(20)
                 .HasColumnName("phone");
+            entity.Property(e => e.RoleId).HasColumnName("role_id");
             entity.Property(e => e.UpdatedAt)
                 .HasDefaultValueSql("CURRENT_TIMESTAMP")
                 .HasColumnType("timestamp without time zone")
                 .HasColumnName("updated_at");
+
+            entity.HasOne(d => d.Role).WithMany(p => p.Users)
+                .HasForeignKey(d => d.RoleId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("users_role_id_fkey");
         });
 
         modelBuilder.Entity<UserActivityLog>(entity =>
@@ -1011,9 +1153,7 @@ public partial class AppDbContext : DbContext
                 .HasColumnType("timestamp without time zone")
                 .HasColumnName("created_at");
             entity.Property(e => e.Description).HasColumnName("description");
-            entity.Property(e => e.Metadata)
-                .HasColumnType("jsonb")
-                .HasColumnName("metadata");
+            entity.Property(e => e.Metadata).HasColumnName("metadata");
             entity.Property(e => e.UserId).HasColumnName("user_id");
 
             entity.HasOne(d => d.User).WithMany(p => p.UserActivityLogs)
@@ -1047,6 +1187,21 @@ public partial class AppDbContext : DbContext
                 .HasForeignKey(d => d.UserId)
                 .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("user_badges_user_id_fkey");
+        });
+
+        modelBuilder.Entity<UserRole>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("user_roles_pkey");
+
+            entity.ToTable("user_roles", tb => tb.HasComment("Справочник ролей пользователей"));
+
+            entity.HasIndex(e => e.Name, "user_roles_name_key").IsUnique();
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Description).HasColumnName("description");
+            entity.Property(e => e.Name)
+                .HasMaxLength(50)
+                .HasColumnName("name");
         });
 
         modelBuilder.Entity<Webinar>(entity =>

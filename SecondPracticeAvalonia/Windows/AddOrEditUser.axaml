@@ -1,0 +1,58 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        x:Class="SecondPracticeAvalonia.Windows.AddOrEditUser"
+        Title="Add or Edit User"
+        Width="600" Height="650">
+
+    <ScrollViewer>
+        <StackPanel Margin="20" Spacing="10">
+            <TextBlock Text="Add or Edit User" FontSize="22" FontWeight="Bold" Margin="0,0,0,10"/>
+
+            <!-- Email -->
+            <TextBlock Text="Email"/>
+            <TextBox Text="{Binding Email, Mode=TwoWay}"/>
+
+            <!-- Password -->
+            <TextBlock Text="Password"/>
+            <TextBox Text="{Binding Password, Mode=TwoWay}" PasswordChar="*"/>
+
+            <!-- First Name -->
+            <TextBlock Text="First Name"/>
+            <TextBox Text="{Binding FirstName, Mode=TwoWay}"/>
+
+            <!-- Last Name -->
+            <TextBlock Text="Last Name"/>
+            <TextBox Text="{Binding LastName, Mode=TwoWay}"/>
+
+            <!-- Phone -->
+            <TextBlock Text="Phone"/>
+            <TextBox Text="{Binding Phone, Mode=TwoWay}"/>
+
+            <!-- Role -->
+            <TextBlock Text="Role"/>
+            <ComboBox x:Name="cbRole" Width="300">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Name}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <!-- Is Active -->
+            <CheckBox Content="Is Active" IsChecked="{Binding IsActive, Mode=TwoWay}"/>
+
+            <!-- Is Blocked -->
+            <CheckBox Content="Is Blocked" IsChecked="{Binding IsBlocked, Mode=TwoWay}"/>
+
+            <!-- Buttons -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Spacing="10" Margin="0,20,0,0">
+                <Button Name="btnClose" Content="Close" Width="100" Click="btnClose_Click"/>
+                <Button Name="btnSave" Content="Save" Width="100" Click="btnSave_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Window>
+

@@ -1,0 +1,58 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        x:Class="SecondPracticeAvalonia.Windows.ManageLessons"
+        Title="Manage Lessons"
+        Width="900" Height="700">
+
+    <Grid Margin="20" RowDefinitions="Auto,Auto,*,Auto">
+        <TextBlock Text="Manage Lessons" FontSize="22" FontWeight="Bold" Margin="0,0,0,10" Grid.Row="0"/>
+
+        <Grid Grid.Row="1" ColumnDefinitions="Auto,*,Auto,*" Margin="0,0,0,10">
+            <TextBlock Text="Course:" VerticalAlignment="Center" Margin="0,0,10,0"/>
+            <ComboBox x:Name="CourseComboBox" Grid.Column="1" Margin="0,0,20,0">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Title}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <TextBlock Text="Module:" VerticalAlignment="Center" Grid.Column="2" Margin="0,0,10,0"/>
+            <ComboBox x:Name="ModuleComboBox" Grid.Column="3">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Title}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </Grid>
+
+        <DataGrid x:Name="LessonsGrid" Grid.Row="2" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Order" Binding="{Binding OrderIndex}" Width="60"/>
+                <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="*"/>
+                <DataGridTextColumn Header="Duration (min)" Binding="{Binding DurationMinutes}" Width="120"/>
+                <DataGridCheckBoxColumn Header="Published" Binding="{Binding IsPublished}" Width="100"/>
+                <DataGridTemplateColumn Header="Actions" Width="200">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Spacing="5">
+                                <Button Name="EditLesson" Content="Edit" Tag="{Binding}" Click="EditLesson_Click"/>
+                                <Button Name="DeleteLesson" Content="Delete" Tag="{Binding}" Click="DeleteLesson_Click"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Spacing="10" Margin="0,10,0,0">
+            <Button Name="btnAddLesson" Content="Add Lesson" Width="120" Click="btnAddLesson_Click"/>
+            <Button Name="btnClose" Content="Close" Width="100" Click="btnClose_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
+

@@ -75,6 +75,14 @@
               "target": "Package",
               "version": "[11.3.8, )"
             },
+            "MessageBox.Avalonia": {
+              "target": "Package",
+              "version": "[3.3.0, )"
+            },
+            "MessageBox.Avalonia.Markdown": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.21, )"

@@ -4,7 +4,8 @@ using System.Threading.Tasks;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
-using SecondPracticeAvalonia.Models;
+using SecondPracticeAvalonia.Data;
+
 
 namespace SecondPracticeAvalonia.Pages;
 
@@ -82,6 +83,18 @@ public partial class TeacherPage : UserControl
     private async void OnWebinarsClick(object? sender, RoutedEventArgs e)
     {
         await LoadWebinarsAsync();
+    }
+
+    private async void OnLessonsClick(object? sender, RoutedEventArgs e)
+    {
+        var manageLessonsWindow = new Windows.ManageLessons(_userId);
+        await manageLessonsWindow.ShowDialog((Window)TopLevel.GetTopLevel(this)!);
+    }
+
+    private async void OnTestsClick(object? sender, RoutedEventArgs e)
+    {
+        var manageTestsWindow = new Windows.ManageTests(_userId);
+        await manageTestsWindow.ShowDialog((Window)TopLevel.GetTopLevel(this)!);
     }
 
     private void OnLogoutClick(object? sender, RoutedEventArgs e)
