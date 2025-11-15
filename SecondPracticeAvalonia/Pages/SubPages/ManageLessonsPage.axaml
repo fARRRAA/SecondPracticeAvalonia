@@ -1,0 +1,52 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="SecondPracticeAvalonia.Pages.SubPages.ManageLessonsPage">
+    <Grid Margin="12">
+        <StackPanel Orientation="Vertical">
+            <Grid ColumnDefinitions="Auto,*,Auto,*" Margin="0,0,0,10">
+                <TextBlock Text="Course:" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                <ComboBox x:Name="CourseComboBox" Grid.Column="1" Margin="0,0,20,0">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Title}"/>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+
+                <TextBlock Text="Module:" VerticalAlignment="Center" Grid.Column="2" Margin="0,0,10,0"/>
+                <ComboBox x:Name="ModuleComboBox" Grid.Column="3">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Title}"/>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </Grid>
+
+            <StackPanel Margin="0,12" Orientation="Horizontal" Spacing="10">
+                <Button Name="AddLesson" Content="Добавить урок" Click="AddLesson_Click"/>
+            </StackPanel>
+
+            <DataGrid Name="LessonsGrid" AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Order" Binding="{Binding OrderIndex}" Width="60"/>
+                    <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="*"/>
+                    <DataGridTextColumn Header="Duration (min)" Binding="{Binding DurationMinutes}" Width="120"/>
+                    <DataGridCheckBoxColumn Header="Published" Binding="{Binding IsPublished}" Width="100"/>
+                    <DataGridTemplateColumn Header="Actions" Width="200">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Spacing="5">
+                                    <Button Name="EditLesson" Content="Редактировать" Tag="{Binding}" Click="EditLesson_Click"/>
+                                    <Button Name="DeleteLesson" Content="Удалить" Tag="{Binding}" Click="DeleteLesson_Click"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</UserControl>
+
+

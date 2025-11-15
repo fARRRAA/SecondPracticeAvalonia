@@ -1,0 +1,29 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        x:Class="SecondPracticeAvalonia.Windows.CourseContent"
+        Title="Course Content"
+        Width="900" Height="700">
+
+    <Grid Margin="20" RowDefinitions="Auto,*,Auto">
+        <TextBlock x:Name="CourseTitleText" Text="Course Content" FontSize="22" FontWeight="Bold" Margin="0,0,0,10" Grid.Row="0"/>
+
+        <TreeView x:Name="ContentTreeView" Grid.Row="1">
+            <TreeView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Title}"/>
+                </DataTemplate>
+            </TreeView.ItemTemplate>
+        </TreeView>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Spacing="10" Margin="0,10,0,0">
+            <Button Name="btnOpenLesson" Content="Open Lesson" Width="120" Click="btnOpenLesson_Click" IsEnabled="False"/>
+            <Button Name="btnOpenTest" Content="Open Test" Width="120" Click="btnOpenTest_Click" IsEnabled="False"/>
+            <Button Name="btnClose" Content="Close" Width="100" Click="btnClose_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
+
+

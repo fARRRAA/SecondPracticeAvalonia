@@ -5,6 +5,7 @@ using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using SecondPracticeAvalonia.Data;
+using SecondPracticeAvalonia.Windows;
 
 
 namespace SecondPracticeAvalonia.Pages;
@@ -16,6 +17,7 @@ public partial class StudentPage : UserControl
     private readonly DataGrid _coursesGrid;
     private readonly DataGrid _progressGrid;
     private readonly TextBlock _userInfoText;
+    private readonly ContentControl _contentArea;
 
     public StudentPage(int userId, Action logoutAction)
     {
@@ -26,6 +28,7 @@ public partial class StudentPage : UserControl
         _coursesGrid = this.FindControl<DataGrid>("CoursesGrid")!;
         _progressGrid = this.FindControl<DataGrid>("ProgressGrid")!;
         _userInfoText = this.FindControl<TextBlock>("UserInfoText")!;
+        _contentArea = this.FindControl<ContentControl>("ContentArea")!;
 
         _userInfoText.Text = $"ID: {_userId}";
         _ = LoadCoursesAsync();
@@ -35,6 +38,7 @@ public partial class StudentPage : UserControl
     {
         _coursesGrid.IsVisible = true;
         _progressGrid.IsVisible = false;
+        _contentArea.IsVisible = false;
 
         using var db = new AppDbContext();
         var data = await Task.Run(() =>
@@ -48,7 +52,8 @@ public partial class StudentPage : UserControl
              {
                  c.Title,
                  CategoryName = cat != null ? cat.Name : "",
-                 Progress = ce.ProgressPercentage
+                 Progress = ce.ProgressPercentage,
+                 CourseId = c.Id
              }).ToList());
 
         _coursesGrid.ItemsSource = data;
@@ -58,6 +63,7 @@ public partial class StudentPage : UserControl
     {
         _coursesGrid.IsVisible = false;
         _progressGrid.IsVisible = true;
+        _contentArea.IsVisible = false;
 
         using var db = new AppDbContext();
         var data = await Task.Run(() =>
@@ -91,6 +97,30 @@ public partial class StudentPage : UserControl
     private void OnLogoutClick(object? sender, RoutedEventArgs e)
     {
         _logoutAction?.Invoke();
+    }
+
+    private async void OnBrowseCoursesClick(object? sender, RoutedEventArgs e)
+    {
+        var browseCoursesWindow = new SecondPracticeAvalonia.Windows.BrowseCourses(_userId);
+        await browseCoursesWindow.ShowDialog((Window)TopLevel.GetTopLevel(this)!);
+        await LoadCoursesAsync();
+    }
+
+    private async void OpenCourse_Click(object? sender, RoutedEventArgs e)
+    {
+        if (sender is Button button && button.Tag is int courseId)
+        {
+            var courseContentWindow = new SecondPracticeAvalonia.Windows.CourseContent(_userId, courseId);
+            await courseContentWindow.ShowDialog((Window)TopLevel.GetTopLevel(this)!);
+        }
+    }
+
+    private void OnDiscussionsClick(object? sender, RoutedEventArgs e)
+    {
+        _coursesGrid.IsVisible = false;
+        _progressGrid.IsVisible = false;
+        _contentArea.IsVisible = true;
+        _contentArea.Content = new SecondPracticeAvalonia.Pages.SubPages.StudentDiscussionsPage(_userId);
     }
 
     private void InitializeComponent()

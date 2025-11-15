@@ -1,0 +1,30 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        x:Class="SecondPracticeAvalonia.Windows.TakeTest"
+        Title="Take Test"
+        Width="900" Height="750">
+
+    <Grid Margin="20" RowDefinitions="Auto,*,Auto">
+        <StackPanel Grid.Row="0" Margin="0,0,0,10">
+            <TextBlock x:Name="TestTitleText" Text="Test" FontSize="22" FontWeight="Bold"/>
+            <TextBlock x:Name="TestDescriptionText" TextWrapping="Wrap" Margin="0,5,0,0"/>
+        </StackPanel>
+
+        <ScrollViewer Grid.Row="1">
+            <StackPanel x:Name="QuestionsPanel" Spacing="15" Margin="0,0,0,10">
+                <!-- Questions will be added dynamically -->
+            </StackPanel>
+        </ScrollViewer>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Spacing="10" Margin="0,10,0,0">
+            <TextBlock x:Name="ScoreText" Text="Score: 0/0" VerticalAlignment="Center" Margin="0,0,20,0"/>
+            <Button Name="btnSubmit" Content="Submit Test" Width="120" Click="btnSubmit_Click"/>
+            <Button Name="btnClose" Content="Close" Width="100" Click="btnClose_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
+
+

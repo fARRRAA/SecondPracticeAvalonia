@@ -16,6 +16,7 @@ public partial class TeacherPage : UserControl
     private readonly DataGrid _coursesGrid;
     private readonly DataGrid _webinarsGrid;
     private readonly TextBlock _userInfoText;
+    private readonly ContentControl _contentArea;
 
     public TeacherPage(int userId, Action logoutAction)
     {
@@ -26,6 +27,7 @@ public partial class TeacherPage : UserControl
         _coursesGrid = this.FindControl<DataGrid>("CoursesGrid")!;
         _webinarsGrid = this.FindControl<DataGrid>("WebinarsGrid")!;
         _userInfoText = this.FindControl<TextBlock>("UserInfoText")!;
+        _contentArea = this.FindControl<ContentControl>("ContentArea")!;
 
         _userInfoText.Text = $"ID: {_userId}";
         _ = LoadCoursesAsync();
@@ -35,6 +37,7 @@ public partial class TeacherPage : UserControl
     {
         _coursesGrid.IsVisible = true;
         _webinarsGrid.IsVisible = false;
+        _contentArea.IsVisible = false;
 
         using var db = new AppDbContext();
         var data = await Task.Run(() =>
@@ -58,6 +61,7 @@ public partial class TeacherPage : UserControl
     {
         _coursesGrid.IsVisible = false;
         _webinarsGrid.IsVisible = true;
+        _contentArea.IsVisible = false;
 
         using var db = new AppDbContext();
         var data = await Task.Run(() =>
@@ -85,16 +89,34 @@ public partial class TeacherPage : UserControl
         await LoadWebinarsAsync();
     }
 
-    private async void OnLessonsClick(object? sender, RoutedEventArgs e)
+    private void OnLessonsClick(object? sender, RoutedEventArgs e)
     {
-        var manageLessonsWindow = new Windows.ManageLessons(_userId);
-        await manageLessonsWindow.ShowDialog((Window)TopLevel.GetTopLevel(this)!);
+        _coursesGrid.IsVisible = false;
+        _webinarsGrid.IsVisible = false;
+        _contentArea.IsVisible = true;
+        _contentArea.Content = new SecondPracticeAvalonia.Pages.SubPages.ManageLessonsPage(_userId);
     }
 
-    private async void OnTestsClick(object? sender, RoutedEventArgs e)
+    private void OnTestsClick(object? sender, RoutedEventArgs e)
     {
-        var manageTestsWindow = new Windows.ManageTests(_userId);
-        await manageTestsWindow.ShowDialog((Window)TopLevel.GetTopLevel(this)!);
+        _coursesGrid.IsVisible = false;
+        _webinarsGrid.IsVisible = false;
+        _contentArea.IsVisible = true;
+        _contentArea.Content = new SecondPracticeAvalonia.Pages.SubPages.ManageTestsPage(_userId);
+    }
+
+    private void OnDiscussionsClick(object? sender, RoutedEventArgs e)
+    {
+        _coursesGrid.IsVisible = false;
+        _webinarsGrid.IsVisible = false;
+        _contentArea.IsVisible = true;
+        _contentArea.Content = new SecondPracticeAvalonia.Pages.SubPages.DiscussionsPage(_userId);
+    }
+
+    private async void OnTestResultsClick(object? sender, RoutedEventArgs e)
+    {
+        var viewSubmissionsWindow = new Windows.ViewTestSubmissions(_userId);
+        await viewSubmissionsWindow.ShowDialog((Window)TopLevel.GetTopLevel(this)!);
     }
 
     private void OnLogoutClick(object? sender, RoutedEventArgs e)

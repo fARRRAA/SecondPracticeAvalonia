@@ -36,6 +36,18 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/Pages/StudentPage.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/Pages/SubPages/DiscussionsPage.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/Pages/SubPages/ManageLessonsPage.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/Pages/SubPages/ManageTestsPage.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/Pages/SubPages/StudentDiscussionsPage.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/Pages/TeacherPage.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
@@ -57,11 +69,35 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/Windows/AddOrEditUser.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/Windows/AskQuestion.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/Windows/AssignTeachersToCourse.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/Windows/BrowseCourses.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/Windows/CourseContent.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/Windows/ManageLessons.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/Windows/ManageTests.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/Windows/TakeTest.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/Windows/ViewDiscussion.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/Windows/ViewLesson.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/Windows/ViewTestSubmissionDetails.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Ильдар/Desktop/Учеба/4-1/учебка/projects/SecondPracticeAvalonia/SecondPracticeAvalonia/Windows/ViewTestSubmissions.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

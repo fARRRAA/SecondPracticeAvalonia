@@ -1,0 +1,26 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        x:Class="SecondPracticeAvalonia.Windows.AskQuestion"
+        Title="Ask Question"
+        Width="700" Height="500">
+
+    <StackPanel Margin="20" Spacing="10">
+        <TextBlock Text="Ask Question" FontSize="22" FontWeight="Bold" Margin="0,0,0,10"/>
+
+        <TextBlock Text="Title"/>
+        <TextBox x:Name="TitleTextBox"/>
+
+        <TextBlock Text="Question"/>
+        <TextBox x:Name="ContentTextBox" AcceptsReturn="True" Height="200"/>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Spacing="10" Margin="0,20,0,0">
+            <Button Name="btnClose" Content="Close" Width="100" Click="btnClose_Click"/>
+            <Button Name="btnSubmit" Content="Submit" Width="100" Click="btnSubmit_Click"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
+
+

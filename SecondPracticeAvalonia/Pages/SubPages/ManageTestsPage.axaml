@@ -1,0 +1,65 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="SecondPracticeAvalonia.Pages.SubPages.ManageTestsPage">
+    <Grid Margin="12">
+        <StackPanel Orientation="Vertical">
+            <Grid RowDefinitions="Auto,Auto" Margin="0,0,0,10">
+                <Grid Grid.Row="0" ColumnDefinitions="Auto,*,Auto,*" Margin="0,0,0,10">
+                    <TextBlock Text="Course:" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                    <ComboBox x:Name="CourseComboBox" Grid.Column="1" Margin="0,0,20,0">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Title}"/>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+
+                    <TextBlock Text="Module:" VerticalAlignment="Center" Grid.Column="2" Margin="0,0,10,0"/>
+                    <ComboBox x:Name="ModuleComboBox" Grid.Column="3">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Title}"/>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                </Grid>
+
+                <Grid Grid.Row="1" ColumnDefinitions="Auto,*">
+                    <TextBlock Text="Lesson:" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                    <ComboBox x:Name="LessonComboBox" Grid.Column="1">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Title}"/>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                </Grid>
+            </Grid>
+
+            <StackPanel Margin="0,12" Orientation="Horizontal" Spacing="10">
+                <Button Name="AddTest" Content="Добавить тест" Click="AddTest_Click"/>
+            </StackPanel>
+
+            <DataGrid Name="TestsGrid" AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="*"/>
+                    <DataGridTextColumn Header="Type" Binding="{Binding Type.Name}" Width="120"/>
+                    <DataGridTextColumn Header="Max Score" Binding="{Binding MaxScore}" Width="100"/>
+                    <DataGridTextColumn Header="Deadline" Binding="{Binding Deadline, StringFormat='{}{0:dd.MM.yyyy}'}" Width="120"/>
+                    <DataGridTemplateColumn Header="Actions" Width="200">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Spacing="5">
+                                    <Button Name="EditTest" Content="Редактировать" Tag="{Binding}" Click="EditTest_Click"/>
+                                    <Button Name="DeleteTest" Content="Удалить" Tag="{Binding}" Click="DeleteTest_Click"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</UserControl>
+
+

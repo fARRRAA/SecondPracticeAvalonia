@@ -9,6 +9,8 @@
           <Button Content="Мои курсы" Click="OnCoursesClick"/>
           <Button Content="Уроки" Click="OnLessonsClick"/>
           <Button Content="Тесты" Click="OnTestsClick"/>
+          <Button Content="Результаты тестов" Click="OnTestResultsClick"/>
+          <Button Content="Обсуждения" Click="OnDiscussionsClick"/>
           <Button Content="Вебинары" Click="OnWebinarsClick"/>
         </StackPanel>
         <TextBlock Grid.Column="2" x:Name="UserInfoText" Foreground="White" Margin="8,0" VerticalAlignment="Center"/>
@@ -32,6 +34,10 @@
           <DataGridTextColumn Header="Запланирован" Binding="{Binding ScheduledAt}" Width="Auto"/>
         </DataGrid.Columns>
       </DataGrid>
+
+      <ContentControl x:Name="ContentArea">
+        <!-- SubPages will be loaded here -->
+      </ContentControl>
     </Grid>
   </DockPanel>
 </UserControl>

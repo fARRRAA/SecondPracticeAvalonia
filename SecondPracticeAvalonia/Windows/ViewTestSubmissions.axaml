@@ -1,0 +1,58 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        x:Class="SecondPracticeAvalonia.Windows.ViewTestSubmissions"
+        Title="Test Submissions"
+        Width="1000" Height="700">
+
+    <Grid Margin="20" RowDefinitions="Auto,Auto,*,Auto">
+        <TextBlock Text="Test Submissions" FontSize="22" FontWeight="Bold" Margin="0,0,0,10" Grid.Row="0"/>
+
+        <Grid Grid.Row="1" ColumnDefinitions="Auto,*,Auto,*" Margin="0,0,0,10">
+            <TextBlock Text="Course:" VerticalAlignment="Center" Margin="0,0,10,0"/>
+            <ComboBox x:Name="CourseComboBox" Grid.Column="1" Margin="0,0,20,0">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Title}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <TextBlock Text="Test:" VerticalAlignment="Center" Grid.Column="2" Margin="0,0,10,0"/>
+            <ComboBox x:Name="TestComboBox" Grid.Column="3">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Title}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </Grid>
+
+        <DataGrid x:Name="SubmissionsGrid" Grid.Row="2" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Student" Binding="{Binding Student.Email}" Width="200"/>
+                <DataGridTextColumn Header="Student Name" Binding="{Binding StudentName}" Width="200"/>
+                <DataGridTextColumn Header="Score" Binding="{Binding Score}" Width="80"/>
+                <DataGridTextColumn Header="Max Score" Binding="{Binding MaxScore}" Width="100"/>
+                <DataGridTextColumn Header="Status" Binding="{Binding Status.Name}" Width="120"/>
+                <DataGridTextColumn Header="Submitted" Binding="{Binding SubmittedAt, StringFormat='{}{0:dd.MM.yyyy HH:mm}'}" Width="150"/>
+                <DataGridTemplateColumn Header="Actions" Width="150">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Name="ViewDetails" Content="View Details" Tag="{Binding}" Click="ViewDetails_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Spacing="10" Margin="0,10,0,0">
+            <Button Name="btnRefresh" Content="Refresh" Width="100" Click="btnRefresh_Click"/>
+            <Button Name="btnClose" Content="Close" Width="100" Click="btnClose_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
+
+
