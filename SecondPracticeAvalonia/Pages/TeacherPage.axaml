@@ -1,44 +1,47 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="SecondPracticeAvalonia.Pages.TeacherPage">
-  <DockPanel>
-    <Border DockPanel.Dock="Top" Background="#2E7D32" Padding="12">
+  <DockPanel Background="#FCFCFC">
+    <Border DockPanel.Dock="Top" Background="#2E7D32" Padding="16" Height="60">
       <Grid ColumnDefinitions="Auto,*,Auto,Auto" VerticalAlignment="Center">
-        <TextBlock Text="Преподаватель" Foreground="White" FontSize="16" FontWeight="Bold"/>
-        <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="8" HorizontalAlignment="Center">
-          <Button Content="Мои курсы" Click="OnCoursesClick"/>
-          <Button Content="Уроки" Click="OnLessonsClick"/>
-          <Button Content="Тесты" Click="OnTestsClick"/>
-          <Button Content="Результаты тестов" Click="OnTestResultsClick"/>
-          <Button Content="Обсуждения" Click="OnDiscussionsClick"/>
-          <Button Content="Вебинары" Click="OnWebinarsClick"/>
+        <TextBlock Text="👨‍🏫 Преподаватель" Foreground="White" FontSize="18" FontWeight="Bold" VerticalAlignment="Center"/>
+        <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="12" HorizontalAlignment="Center">
+          <Button Content="Мои курсы" Click="OnCoursesClick" Background="#2E7D32" Foreground="White" Height="35"/>
+          <Button Content="Уроки" Click="OnLessonsClick" Background="#2E7D32" Foreground="White" Height="35"/>
+          <Button Content="Тесты" Click="OnTestsClick" Background="#2E7D32" Foreground="White" Height="35"/>
+          <Button Content="Результаты тестов" Click="OnTestResultsClick" Background="#2E7D32" Foreground="White" Height="35"/>
+          <Button Content="Обсуждения" Click="OnDiscussionsClick" Background="#2E7D32" Foreground="White" Height="35"/>
+          <Button Content="Анонсы" Click="OnAnnouncementsClick" Background="#2E7D32" Foreground="White" Height="35"/>
+          <Button Content="Вебинары" Click="OnWebinarsClick" Background="#2E7D32" Foreground="White" Height="35"/>
         </StackPanel>
-        <TextBlock Grid.Column="2" x:Name="UserInfoText" Foreground="White" Margin="8,0" VerticalAlignment="Center"/>
-        <Button Grid.Column="3" Content="Выход" Click="OnLogoutClick"/>
+        <TextBlock Grid.Column="2" x:Name="UserInfoText" Foreground="White" Margin="8,0" VerticalAlignment="Center" FontSize="14"/>
+        <Button Grid.Column="3" Content="Выход" Click="OnLogoutClick" Background="#E53935" Foreground="White" Height="35"/>
       </Grid>
     </Border>
 
-    <Grid Margin="12">
-      <DataGrid x:Name="CoursesGrid" AutoGenerateColumns="False" IsReadOnly="True">
-        <DataGrid.Columns>
-          <DataGridTextColumn Header="Курс" Binding="{Binding Title}" Width="350"/>
-          <DataGridTextColumn Header="Категория" Binding="{Binding CategoryName}" Width="Auto"/>
-          <DataGridTextColumn Header="Студентов" Binding="{Binding TotalStudents}" Width="Auto"/>
-        </DataGrid.Columns>
-      </DataGrid>
+    <ScrollViewer>
+      <Grid Margin="20" Background="#FCFCFC">
+        <DataGrid x:Name="CoursesGrid" AutoGenerateColumns="False" IsReadOnly="True" Background="#FFFFFF" BorderThickness="1" BorderBrush="#E0E0E0">
+          <DataGrid.Columns>
+            <DataGridTextColumn Header="📚 Курс" Binding="{Binding Title}" Width="350"/>
+            <DataGridTextColumn Header="📂 Категория" Binding="{Binding CategoryName}" Width="Auto"/>
+            <DataGridTextColumn Header="👥 Студентов" Binding="{Binding TotalStudents}" Width="Auto"/>
+          </DataGrid.Columns>
+        </DataGrid>
 
-      <DataGrid x:Name="WebinarsGrid" AutoGenerateColumns="False" IsReadOnly="True" IsVisible="False">
-        <DataGrid.Columns>
-          <DataGridTextColumn Header="Название" Binding="{Binding Title}" Width="350"/>
-          <DataGridTextColumn Header="Курс" Binding="{Binding CourseTitle}" Width="Auto"/>
-          <DataGridTextColumn Header="Запланирован" Binding="{Binding ScheduledAt}" Width="Auto"/>
-        </DataGrid.Columns>
-      </DataGrid>
+        <DataGrid x:Name="WebinarsGrid" AutoGenerateColumns="False" IsReadOnly="True" IsVisible="False" Background="#FFFFFF" BorderThickness="1" BorderBrush="#E0E0E0">
+          <DataGrid.Columns>
+            <DataGridTextColumn Header="📹 Название" Binding="{Binding Title}" Width="350"/>
+            <DataGridTextColumn Header="📚 Курс" Binding="{Binding CourseTitle}" Width="Auto"/>
+            <DataGridTextColumn Header="⏰ Запланирован" Binding="{Binding ScheduledAt}" Width="Auto"/>
+          </DataGrid.Columns>
+        </DataGrid>
 
-      <ContentControl x:Name="ContentArea">
-        <!-- SubPages will be loaded here -->
-      </ContentControl>
-    </Grid>
+        <ContentControl x:Name="ContentArea" Background="#FCFCFC">
+          <!-- SubPages will be loaded here -->
+        </ContentControl>
+      </Grid>
+    </ScrollViewer>
   </DockPanel>
 </UserControl>
 

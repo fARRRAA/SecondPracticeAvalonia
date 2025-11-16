@@ -4,6 +4,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="1024" d:DesignHeight="720"
         x:Class="SecondPracticeAvalonia.MainWindow"
-        Title="EduTrack">
-  <ContentControl x:Name="PageHost"/>
+        Title="EduTrack"
+        Background="#FCFCFC">
+  <DockPanel Background="#FCFCFC">
+    <Border DockPanel.Dock="Top" Background="#2E7D32" Padding="16" Height="70">
+      <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Spacing="12">
+        <!--<Image Source="avares://Image/logo.jpg" Width="50" Height="50"/>-->
+        <TextBlock Text="EduTrack" FontSize="28" FontWeight="Bold" Foreground="White" VerticalAlignment="Center"/>
+      </StackPanel>
+    </Border>
+    <ContentControl x:Name="PageHost" Background="#FCFCFC"/>
+  </DockPanel>
 </Window>

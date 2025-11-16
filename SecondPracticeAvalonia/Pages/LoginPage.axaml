@@ -13,7 +13,7 @@
       <TextBox x:Name="EmailTextBox" Watermark="name@example.com"/>
 
       <TextBlock Text="Password" Margin="0,8,0,0"/>
-      <TextBox x:Name="PasswordTextBox" PasswordChar="•"/>
+      <TextBox x:Name="PasswordTextBox" PasswordChar="*"/>
 
       <CheckBox x:Name="RememberCheck" Content="Remember me" Margin="0,8,0,0"/>
 

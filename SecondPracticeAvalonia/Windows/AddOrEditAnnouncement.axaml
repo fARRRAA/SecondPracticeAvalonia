@@ -1,0 +1,33 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        x:Class="SecondPracticeAvalonia.Windows.AddOrEditAnnouncement"
+        Title="Добавить или редактировать анонс"
+        Width="600" Height="500"
+        Background="#FCFCFC">
+
+    <ScrollViewer Background="#FCFCFC">
+        <StackPanel Margin="20" Spacing="16" Background="#FCFCFC">
+            <TextBlock Text="📢 Добавить или редактировать анонс" FontSize="22" FontWeight="Bold" Margin="0,0,0,10" Foreground="#2E7D32"/>
+
+            <StackPanel Spacing="6">
+                <TextBlock Text="Название" FontSize="14" FontWeight="SemiBold" Foreground="#212121"/>
+                <TextBox Text="{Binding Title, Mode=TwoWay}" Background="#FFFFFF" BorderBrush="#E0E0E0" Padding="10" Height="40"/>
+            </StackPanel>
+
+            <StackPanel Spacing="6">
+                <TextBlock Text="Содержание" FontSize="14" FontWeight="SemiBold" Foreground="#212121"/>
+                <TextBox Text="{Binding Content, Mode=TwoWay}" AcceptsReturn="True" Height="200" Background="#FFFFFF" BorderBrush="#E0E0E0" Padding="10"/>
+            </StackPanel>
+
+            <CheckBox Content="✅ Опубликовать" IsChecked="{Binding IsPublished, Mode=TwoWay}" FontSize="14" Foreground="#212121"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Spacing="12" Margin="0,20,0,0">
+                <Button Name="btnClose" Content="Отмена" Width="100" Click="btnClose_Click" Background="#546E7A" Foreground="White"/>
+                <Button Name="btnSave" Content="Сохранить" Width="120" Click="btnSave_Click" Background="#4CAF50" Foreground="White"/>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Window>

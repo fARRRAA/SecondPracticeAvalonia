@@ -10,18 +10,14 @@
     <StackPanel Margin="20" Spacing="10">
         <TextBlock Text="Add or Edit Answer Option" FontSize="22" FontWeight="Bold" Margin="0,0,0,10"/>
 
-        <!-- Option Text -->
         <TextBlock Text="Option Text"/>
         <TextBox Text="{Binding OptionText, Mode=TwoWay}" AcceptsReturn="True" Height="100"/>
 
-        <!-- Is Correct -->
         <CheckBox Content="Is Correct Answer" IsChecked="{Binding IsCorrect, Mode=TwoWay}"/>
 
-        <!-- Order Index -->
         <TextBlock Text="Order Index"/>
         <TextBox Text="{Binding OrderIndex, Mode=TwoWay}"/>
 
-        <!-- Buttons -->
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Spacing="10" Margin="0,20,0,0">
             <Button Name="btnClose" Content="Close" Width="100" Click="btnClose_Click"/>
             <Button Name="btnSave" Content="Save" Width="100" Click="btnSave_Click"/>

@@ -1,0 +1,18 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="SecondPracticeAvalonia.Pages.SubPages.StudentAnnouncementsPage">
+    <Grid Margin="20" Background="#FCFCFC">
+        <StackPanel Orientation="Vertical" Spacing="16">
+            <TextBlock Text="📢 Мои анонсы" FontSize="20" FontWeight="Bold" Foreground="#2E7D32"/>
+
+            <DataGrid Name="AnnouncementsGrid" AutoGenerateColumns="False" IsReadOnly="True" Background="#FFFFFF" BorderThickness="1" BorderBrush="#E0E0E0">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="📚 Курс" Binding="{Binding CourseName}" Width="200"/>
+                    <DataGridTextColumn Header="📝 Название" Binding="{Binding Title}" Width="*"/>
+                    <DataGridTextColumn Header="📄 Содержание" Binding="{Binding Content}" Width="300"/>
+                    <DataGridTextColumn Header="📅 Дата" Binding="{Binding CreatedAt, StringFormat='{}{0:dd.MM.yyyy HH:mm}'}" Width="150"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</UserControl>

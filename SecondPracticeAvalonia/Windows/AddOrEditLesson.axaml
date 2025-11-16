@@ -11,30 +11,23 @@
         <StackPanel Margin="20" Spacing="10">
             <TextBlock Text="Add or Edit Lesson" FontSize="22" FontWeight="Bold" Margin="0,0,0,10"/>
 
-            <!-- Title -->
             <TextBlock Text="Title"/>
             <TextBox Text="{Binding Title, Mode=TwoWay}"/>
 
-            <!-- Content -->
             <TextBlock Text="Content"/>
             <TextBox Text="{Binding Content, Mode=TwoWay}" AcceptsReturn="True" Height="150"/>
 
-            <!-- Video URL -->
             <TextBlock Text="Video URL"/>
             <TextBox Text="{Binding VideoUrl, Mode=TwoWay}"/>
 
-            <!-- Duration Minutes -->
             <TextBlock Text="Duration (minutes)"/>
             <TextBox Text="{Binding DurationMinutes, Mode=TwoWay}"/>
 
-            <!-- Order Index -->
             <TextBlock Text="Order Index"/>
             <TextBox Text="{Binding OrderIndex, Mode=TwoWay}"/>
 
-            <!-- Is Published -->
             <CheckBox Content="Is Published" IsChecked="{Binding IsPublished, Mode=TwoWay}"/>
 
-            <!-- Buttons -->
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Spacing="10" Margin="0,20,0,0">
                 <Button Name="btnClose" Content="Close" Width="100" Click="btnClose_Click"/>
                 <Button Name="btnSave" Content="Save" Width="100" Click="btnSave_Click"/>

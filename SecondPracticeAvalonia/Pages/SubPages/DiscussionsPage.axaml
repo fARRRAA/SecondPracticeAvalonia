@@ -1,11 +1,13 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="SecondPracticeAvalonia.Pages.SubPages.DiscussionsPage">
-    <Grid Margin="12">
-        <StackPanel Orientation="Vertical">
-            <Grid ColumnDefinitions="Auto,*,Auto,*" Margin="0,0,0,10">
-                <TextBlock Text="Course:" VerticalAlignment="Center" Margin="0,0,10,0"/>
-                <ComboBox x:Name="CourseComboBox" Grid.Column="1" Margin="0,0,20,0">
+    <Grid Margin="20" Background="#FCFCFC">
+        <StackPanel Orientation="Vertical" Spacing="16">
+            <TextBlock Text="💬 Обсуждения" FontSize="20" FontWeight="Bold" Foreground="#2E7D32"/>
+            
+            <Grid ColumnDefinitions="Auto,*,Auto,*" Margin="0" RowDefinitions="Auto">
+                <TextBlock Text="Курс:" VerticalAlignment="Center" Margin="0,0,10,0" FontSize="14" Foreground="#546E7A"/>
+                <ComboBox x:Name="CourseComboBox" Grid.Column="1" Margin="0,0,20,0" Background="#FFFFFF" BorderBrush="#E0E0E0">
                     <ComboBox.ItemTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding Title}"/>
@@ -13,8 +15,8 @@
                     </ComboBox.ItemTemplate>
                 </ComboBox>
 
-                <TextBlock Text="Lesson:" VerticalAlignment="Center" Grid.Column="2" Margin="0,0,10,0"/>
-                <ComboBox x:Name="LessonComboBox" Grid.Column="3">
+                <TextBlock Text="Урок:" VerticalAlignment="Center" Grid.Column="2" Margin="0,0,10,0" FontSize="14" Foreground="#546E7A"/>
+                <ComboBox x:Name="LessonComboBox" Grid.Column="3" Background="#FFFFFF" BorderBrush="#E0E0E0">
                     <ComboBox.ItemTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding Title}"/>
@@ -23,16 +25,16 @@
                 </ComboBox>
             </Grid>
 
-            <DataGrid Name="DiscussionsGrid" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid Name="DiscussionsGrid" AutoGenerateColumns="False" IsReadOnly="True" Background="#FFFFFF" BorderThickness="1" BorderBrush="#E0E0E0">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="*"/>
-                    <DataGridTextColumn Header="Student" Binding="{Binding StudentName}" Width="200"/>
-                    <DataGridCheckBoxColumn Header="Answered" Binding="{Binding IsAnswered}" Width="100"/>
-                    <DataGridTextColumn Header="Created" Binding="{Binding CreatedAt, StringFormat='{}{0:dd.MM.yyyy}'}" Width="120"/>
-                    <DataGridTemplateColumn Header="Actions" Width="150">
+                    <DataGridTextColumn Header="📝 Название" Binding="{Binding Title}" Width="*"/>
+                    <DataGridTextColumn Header="👤 Студент" Binding="{Binding StudentName}" Width="200"/>
+                    <DataGridCheckBoxColumn Header="✅ Ответ дан" Binding="{Binding IsAnswered}" Width="100"/>
+                    <DataGridTextColumn Header="📅 Создано" Binding="{Binding CreatedAt, StringFormat='{}{0:dd.MM.yyyy}'}" Width="120"/>
+                    <DataGridTemplateColumn Header="⚙️ Действия" Width="150">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Name="ViewDiscussion" Content="View" Tag="{Binding}" Click="ViewDiscussion_Click"/>
+                                <Button Name="ViewDiscussion" Content="👁️ Просмотр" Tag="{Binding}" Click="ViewDiscussion_Click" Background="#2E7D32" Foreground="White" Padding="8,4"/>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>

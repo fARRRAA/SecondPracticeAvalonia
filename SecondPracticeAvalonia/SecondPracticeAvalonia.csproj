@@ -33,4 +33,11 @@
       <DependentUpon>AddOrEditCourse.axaml</DependentUpon>
     </Compile>
   </ItemGroup>
+	<ItemGroup>
+		<AvaloniaResource Include="Image\**" />
+
+	</ItemGroup>
+	<ItemGroup>
+		<AvaloniaResource Include="Image\logo.jpg" />
+	</ItemGroup>
 </Project>

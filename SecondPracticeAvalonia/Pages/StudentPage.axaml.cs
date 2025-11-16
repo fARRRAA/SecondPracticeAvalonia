@@ -123,6 +123,14 @@ public partial class StudentPage : UserControl
         _contentArea.Content = new SecondPracticeAvalonia.Pages.SubPages.StudentDiscussionsPage(_userId);
     }
 
+    private void OnAnnouncementsClick(object? sender, RoutedEventArgs e)
+    {
+        _coursesGrid.IsVisible = false;
+        _progressGrid.IsVisible = false;
+        _contentArea.IsVisible = true;
+        _contentArea.Content = new SecondPracticeAvalonia.Pages.SubPages.StudentAnnouncementsPage(_userId);
+    }
+
     private void InitializeComponent()
     {
         AvaloniaXamlLoader.Load(this);

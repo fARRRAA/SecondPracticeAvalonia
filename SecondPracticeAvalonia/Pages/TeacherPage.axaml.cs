@@ -113,6 +113,14 @@ public partial class TeacherPage : UserControl
         _contentArea.Content = new SecondPracticeAvalonia.Pages.SubPages.DiscussionsPage(_userId);
     }
 
+    private void OnAnnouncementsClick(object? sender, RoutedEventArgs e)
+    {
+        _coursesGrid.IsVisible = false;
+        _webinarsGrid.IsVisible = false;
+        _contentArea.IsVisible = true;
+        _contentArea.Content = new SecondPracticeAvalonia.Pages.SubPages.AnnouncementsPage(_userId);
+    }
+
     private async void OnTestResultsClick(object? sender, RoutedEventArgs e)
     {
         var viewSubmissionsWindow = new Windows.ViewTestSubmissions(_userId);

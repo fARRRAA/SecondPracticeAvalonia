@@ -16,7 +16,6 @@
 
         <ScrollViewer Grid.Row="1">
             <StackPanel x:Name="RepliesPanel" Spacing="10">
-                <!-- Replies will be added dynamically -->
             </StackPanel>
         </ScrollViewer>
 

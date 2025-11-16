@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SecondPracticeAvalonia")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9efa65791d023d9a4f2cd442a32621f6398ba406")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc44635b956cc63514fd28b7cbcb122cf5b0577c")]
 [assembly: System.Reflection.AssemblyProductAttribute("SecondPracticeAvalonia")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SecondPracticeAvalonia")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
